@@ -112,7 +112,7 @@ const BlogSection = () => {
                             className="group inline-flex items-center gap-3.5 text-primary dark:text-white font-bold uppercase tracking-widest text-xs hover:text-secondary dark:hover:text-blue-400 transition-colors duration-300 mr-auto"
                         >
                             <span>View All Articles</span>
-                            <div className="w-10 h-10 rounded-full bg-secondary dark:bg-blue-500 text-white flex items-center justify-center transition-transform duration-500 group-hover:scale-110 group-hover:rotate-45 shadow-[0_0_10px_rgba(249,115,22,0.3)] group-hover:shadow-[0_0_15px_rgba(249,115,22,0.6)]">
+                            <div className="w-10 h-10 rounded-full bg-secondary dark:bg-blue-500 text-white flex items-center justify-center transition-transform duration-500 group-hover:scale-110 group-hover:rotate-45 shadow-[0_0_10px_rgba(227,77,42,0.3)] group-hover:shadow-[0_0_15px_rgba(227,77,42,0.6)]">
                                 <ArrowUpRight size={16} />
                             </div>
                         </Link>
@@ -126,7 +126,7 @@ const BlogSection = () => {
                             key={post.title}
                             to={`/blog/${slugify(post.title)}`}
                             style={reveal(150 + idx * 80)}
-                            className="group relative aspect-[4/3] rounded-3xl overflow-hidden shadow-lg border border-slate-200/40 dark:border-white/10 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(249,115,22,0.15)] dark:hover:shadow-[0_20px_50px_rgba(37,99,235,0.2)] block"
+                            className="group relative aspect-[4/3] rounded-3xl overflow-hidden shadow-lg border border-slate-200/40 dark:border-white/10 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(227,77,42,0.15)] dark:hover:shadow-[0_20px_50px_rgba(37,99,235,0.2)] block"
                         >
                             {/* Background Image with Zoom */}
                             <img
@@ -139,7 +139,7 @@ const BlogSection = () => {
                             <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/70 to-slate-950/20 group-hover:from-slate-950 group-hover:via-slate-950/85 transition-all duration-500 z-10" />
                             
                             {/* Dynamic Hover Glow Rings inside card */}
-                            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-[radial-gradient(circle_at_bottom,rgba(249,115,22,0.15),transparent_60%)] dark:bg-[radial-gradient(circle_at_bottom,rgba(37,99,235,0.2),transparent_60%)] transition-opacity duration-700 pointer-events-none z-10" />
+                            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-[radial-gradient(circle_at_bottom,rgba(227,77,42,0.15),transparent_60%)] dark:bg-[radial-gradient(circle_at_bottom,rgba(37,99,235,0.2),transparent_60%)] transition-opacity duration-700 pointer-events-none z-10" />
 
                             {/* Floating Category Tag */}
                             <div className="absolute top-4 left-4 z-20">

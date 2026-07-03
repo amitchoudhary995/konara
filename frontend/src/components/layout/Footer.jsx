@@ -34,7 +34,7 @@ const Footer = () => {
                             placeholder="Enter your email address" 
                             className="w-full bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-full pl-5 pr-28 py-3 text-xs text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-white/35 focus:outline-none focus:border-secondary/60 focus:bg-white dark:focus:bg-white/10 transition-all duration-500 shadow-inner"
                         />
-                        <button className="absolute right-1 top-1 bottom-1 bg-gradient-to-r from-secondary to-orange-500 hover:from-orange-500 hover:to-secondary text-white font-bold rounded-full px-5 transition-all duration-300 shadow-[0_0_10px_rgba(249,115,22,0.2)] hover:shadow-[0_0_15px_rgba(249,115,22,0.5)] flex items-center gap-1.5 uppercase tracking-wider text-[10px]">
+                        <button className="absolute right-1 top-1 bottom-1 bg-gradient-to-r from-secondary to-orange-500 hover:from-orange-500 hover:to-secondary text-white font-bold rounded-full px-5 transition-all duration-300 shadow-[0_0_10px_rgba(227,77,42,0.2)] hover:shadow-[0_0_15px_rgba(227,77,42,0.5)] flex items-center gap-1.5 uppercase tracking-wider text-[10px]">
                             Subscribe
                         </button>
                     </form>

@@ -178,7 +178,7 @@ const Header = () => {
 
               <Link
                 to="/contact"
-                className="flex items-center gap-2 bg-secondary text-white font-nav font-semibold text-[11px] uppercase tracking-widest rounded-full pl-5 pr-1.5 py-1.5 hover:bg-secondary/90 transition-all hover:shadow-[0_0_20px_rgba(249,115,22,0.4)] group focus-visible:outline-2 focus-visible:outline-secondary shadow-sm"
+                className="flex items-center gap-2 bg-secondary text-white font-nav font-semibold text-[11px] uppercase tracking-widest rounded-full pl-5 pr-1.5 py-1.5 hover:bg-secondary/90 transition-all hover:shadow-[0_0_20px_rgba(227,77,42,0.4)] group focus-visible:outline-2 focus-visible:outline-secondary shadow-sm"
               >
                 Get Quotes
                 <span className="w-6 h-6 rounded-full bg-primary text-white flex items-center justify-center group-hover:rotate-45 transition-transform duration-300" aria-hidden="true">

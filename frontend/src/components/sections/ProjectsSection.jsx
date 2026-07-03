@@ -145,10 +145,10 @@ const ProjectsSection = () => {
                                     key={project.id}
                                     onMouseEnter={() => setActiveIndex(idx)}
                                     onClick={() => setActiveIndex(idx)}
-                                    className={`group flex items-center gap-3.5 p-2 sm:p-2.5 cursor-pointer rounded-xl transition-all duration-300 relative overflow-hidden border ${isActive ? 'bg-white/10 border-white/20 shadow-[0_4px_20px_rgba(249,115,22,0.1)] backdrop-blur-md' : 'hover:bg-white/5 border-transparent hover:border-white/5'}`}
+                                    className={`group flex items-center gap-3.5 p-2 sm:p-2.5 cursor-pointer rounded-xl transition-all duration-300 relative overflow-hidden border ${isActive ? 'bg-white/10 border-white/20 shadow-[0_4px_20px_rgba(227,77,42,0.1)] backdrop-blur-md' : 'hover:bg-white/5 border-transparent hover:border-white/5'}`}
                                 >
                                     {isActive && (
-                                        <div className="absolute left-0 top-0 bottom-0 w-1 bg-secondary shadow-[0_0_15px_rgba(249,115,22,0.8)]" />
+                                        <div className="absolute left-0 top-0 bottom-0 w-1 bg-secondary shadow-[0_0_15px_rgba(227,77,42,0.8)]" />
                                     )}
                                     
                                     <span className={`text-sm md:text-base font-black font-nav transition-colors duration-300 ${isActive ? 'text-secondary' : 'text-zinc-500 group-hover:text-zinc-300'}`}>
@@ -181,7 +181,7 @@ const ProjectsSection = () => {
                                     <span className="flex items-center gap-1.5 bg-black/50 border border-white/5 px-3 py-1.5 rounded-full text-[10px] font-bold text-zinc-300 uppercase tracking-wider">
                                         <Building size={11} className="text-secondary" /> {projects[activeIndex].type}
                                     </span>
-                                    <span className="flex items-center gap-1.5 bg-secondary/10 border border-secondary/30 px-3 py-1.5 rounded-full text-[10px] font-bold text-secondary uppercase tracking-wider shadow-[0_0_10px_rgba(249,115,22,0.15)]">
+                                    <span className="flex items-center gap-1.5 bg-secondary/10 border border-secondary/30 px-3 py-1.5 rounded-full text-[10px] font-bold text-secondary uppercase tracking-wider shadow-[0_0_10px_rgba(227,77,42,0.15)]">
                                         <Zap size={11} /> {projects[activeIndex].stats}
                                     </span>
                                 </div>
@@ -207,7 +207,7 @@ const ProjectsSection = () => {
                                 </div>
 
                                 <button className="group flex items-center gap-3 text-white font-bold uppercase tracking-widest text-[10px]">
-                                    <div className="w-8 h-8 rounded-full bg-secondary text-white flex items-center justify-center transition-transform duration-500 group-hover:scale-110 group-hover:rotate-45 shadow-[0_0_10px_rgba(249,115,22,0.3)] group-hover:shadow-[0_0_15px_rgba(249,115,22,0.6)]">
+                                    <div className="w-8 h-8 rounded-full bg-secondary text-white flex items-center justify-center transition-transform duration-500 group-hover:scale-110 group-hover:rotate-45 shadow-[0_0_10px_rgba(227,77,42,0.3)] group-hover:shadow-[0_0_15px_rgba(227,77,42,0.6)]">
                                         <ArrowUpRight size={14} />
                                     </div>
                                     <span>Explore Case Study</span>

@@ -104,7 +104,7 @@ const AdvantageSection = () => {
                             <article
                                 key={item.title}
                                 style={reveal(100 + idx * 80)}
-                                className="group flex flex-col overflow-hidden rounded-3xl bg-white dark:bg-slate-900/60 border border-slate-200/60 dark:border-white/10 shadow-[0_8px_30px_rgb(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(249,115,22,0.12)] dark:hover:shadow-[0_20px_45px_rgba(37,99,235,0.15)] hover:border-secondary/40 dark:hover:border-blue-500/40 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-2 focus-within:shadow-2xl focus-within:-translate-y-2 focus-within:ring-2 focus-within:ring-secondary focus-within:ring-offset-4 flex-1"
+                                className="group flex flex-col overflow-hidden rounded-3xl bg-white dark:bg-slate-900/60 border border-slate-200/60 dark:border-white/10 shadow-[0_8px_30px_rgb(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(227,77,42,0.12)] dark:hover:shadow-[0_20px_45px_rgba(37,99,235,0.15)] hover:border-secondary/40 dark:hover:border-blue-500/40 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-2 focus-within:shadow-2xl focus-within:-translate-y-2 focus-within:ring-2 focus-within:ring-secondary focus-within:ring-offset-4 flex-1"
                                 tabIndex={0}
                             >
                                 {/* Top Image aspect layout */}
@@ -128,7 +128,7 @@ const AdvantageSection = () => {
                                 {/* Content Details Box */}
                                 <div className="p-5 flex flex-col flex-1 justify-between bg-white dark:bg-slate-900/40 relative overflow-hidden">
                                     {/* Ambient hover gradient glow */}
-                                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-[radial-gradient(circle_at_center,rgba(249,115,22,0.08),transparent_60%)] dark:bg-[radial-gradient(circle_at_center,rgba(37,99,235,0.12),transparent_60%)] transition-opacity duration-700 pointer-events-none" />
+                                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-[radial-gradient(circle_at_center,rgba(227,77,42,0.08),transparent_60%)] dark:bg-[radial-gradient(circle_at_center,rgba(37,99,235,0.12),transparent_60%)] transition-opacity duration-700 pointer-events-none" />
                                     
                                     <div className="relative z-10">
                                         <h4 className="font-black text-lg text-primary dark:text-white mb-2 tracking-tight group-hover:text-secondary dark:group-hover:text-blue-400 transition-colors duration-300">

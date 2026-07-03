@@ -59,7 +59,7 @@ const CTASection = () => {
                         <div className="lg:col-span-5 flex flex-col gap-3.5 lg:pl-6 w-full">
                             <Link
                                 to="/contact"
-                                className="group flex items-center justify-between rounded-2xl bg-white text-orange-600 hover:bg-slate-50 dark:bg-secondary dark:text-white dark:hover:bg-secondary/90 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] uppercase tracking-widest font-nav shadow-lg hover:shadow-[0_15px_30px_rgba(255,255,255,0.2)] dark:hover:shadow-[0_15px_30px_rgba(249,115,22,0.45)] w-full text-center px-6 py-4.5 text-xs font-bold hover:-translate-y-0.5"
+                                className="group flex items-center justify-between rounded-2xl bg-white text-orange-600 hover:bg-slate-50 dark:bg-secondary dark:text-white dark:hover:bg-secondary/90 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] uppercase tracking-widest font-nav shadow-lg hover:shadow-[0_15px_30px_rgba(255,255,255,0.2)] dark:hover:shadow-[0_15px_30px_rgba(227,77,42,0.45)] w-full text-center px-6 py-4.5 text-xs font-bold hover:-translate-y-0.5"
                             >
                                 <span className="mx-auto flex items-center gap-2">
                                     Get a custom proposal

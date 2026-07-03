@@ -132,7 +132,7 @@ const HeroSection = () => {
                                             {/* Circular Icon */}
                                             <div
                                                 className={`w-11 h-11 rounded-full border flex items-center justify-center transition-all duration-300 ${isActive
-                                                    ? 'border-secondary bg-secondary/15 text-secondary shadow-[0_0_12px_rgba(249,115,22,0.2)]'
+                                                    ? 'border-secondary bg-secondary/15 text-secondary shadow-[0_0_12px_rgba(227,77,42,0.2)]'
                                                     : 'border-white/20 bg-black/25 text-white/60 group-hover:border-white/50 group-hover:text-white'
                                                     }`}
                                             >
@@ -195,7 +195,7 @@ const HeroSection = () => {
                             {/* Button CTA */}
                             <Link
                                 to={slide.ctaLink}
-                                className="inline-flex items-center gap-3 bg-secondary text-white font-nav font-bold text-xs uppercase tracking-widest rounded-full pl-6 pr-2 py-2 hover:bg-secondary/90 transition-all hover:shadow-[0_0_20px_rgba(249,115,22,0.35)] hover:-translate-y-0.5 group shadow-lg"
+                                className="inline-flex items-center gap-3 bg-secondary text-white font-nav font-bold text-xs uppercase tracking-widest rounded-full pl-6 pr-2 py-2 hover:bg-secondary/90 transition-all hover:shadow-[0_0_20px_rgba(227,77,42,0.35)] hover:-translate-y-0.5 group shadow-lg"
                             >
                                 {slide.ctaText}
                                 <span className="w-7 h-7 rounded-full bg-primary text-white flex items-center justify-center group-hover:rotate-45 transition-transform duration-300">

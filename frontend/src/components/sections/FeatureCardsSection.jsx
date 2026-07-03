@@ -128,7 +128,7 @@ const FeatureCarouselSection = () => {
                         <button
                             onClick={() => scroll('left')}
                             disabled={atStart}
-                            className="w-11 h-11 rounded-full bg-white dark:bg-slate-900 border border-[#e2e8f0] dark:border-white/10 flex items-center justify-center text-primary dark:text-white transition-all duration-300 shadow-sm enabled:hover:bg-secondary enabled:hover:text-white enabled:hover:border-secondary enabled:hover:shadow-[0_8px_20px_rgba(249,115,22,0.25)] disabled:opacity-40 disabled:cursor-not-allowed"
+                            className="w-11 h-11 rounded-full bg-white dark:bg-slate-900 border border-[#e2e8f0] dark:border-white/10 flex items-center justify-center text-primary dark:text-white transition-all duration-300 shadow-sm enabled:hover:bg-secondary enabled:hover:text-white enabled:hover:border-secondary enabled:hover:shadow-[0_8px_20px_rgba(227,77,42,0.25)] disabled:opacity-40 disabled:cursor-not-allowed"
                             aria-label="Scroll left"
                         >
                             <ChevronLeft size={18} />
@@ -136,7 +136,7 @@ const FeatureCarouselSection = () => {
                         <button
                             onClick={() => scroll('right')}
                             disabled={atEnd}
-                            className="w-11 h-11 rounded-full bg-white dark:bg-slate-900 border border-[#e2e8f0] dark:border-white/10 flex items-center justify-center text-primary dark:text-white transition-all duration-300 shadow-sm enabled:hover:bg-secondary enabled:hover:text-white enabled:hover:border-secondary enabled:hover:shadow-[0_8px_20px_rgba(249,115,22,0.25)] disabled:opacity-40 disabled:cursor-not-allowed"
+                            className="w-11 h-11 rounded-full bg-white dark:bg-slate-900 border border-[#e2e8f0] dark:border-white/10 flex items-center justify-center text-primary dark:text-white transition-all duration-300 shadow-sm enabled:hover:bg-secondary enabled:hover:text-white enabled:hover:border-secondary enabled:hover:shadow-[0_8px_20px_rgba(227,77,42,0.25)] disabled:opacity-40 disabled:cursor-not-allowed"
                             aria-label="Scroll right"
                         >
                             <ChevronRight size={18} />
@@ -157,13 +157,13 @@ const FeatureCarouselSection = () => {
                             <div
                                 key={idx}
                                 data-card
-                                className="group relative bg-slate-50/50 dark:bg-slate-900/60 border border-[#e2e8f0] dark:border-white/10 hover:border-secondary/60 dark:hover:border-blue-500/60 rounded-3xl p-6 sm:p-7 text-center shadow-lg hover:shadow-[0_20px_40px_rgba(249,115,22,0.18)] dark:hover:shadow-[0_20px_40px_rgba(59,130,246,0.22)] transition-all duration-500 cursor-default min-w-[85vw] sm:min-w-[calc(50%-12px)] lg:min-w-[calc(33.333%-16px)] xl:min-w-[calc(25%-18px)] flex-shrink-0 snap-start overflow-hidden bg-white dark:bg-slate-900/40"
+                                className="group relative bg-slate-50/50 dark:bg-slate-900/60 border border-[#e2e8f0] dark:border-white/10 hover:border-secondary/60 dark:hover:border-blue-500/60 rounded-3xl p-6 sm:p-7 text-center shadow-lg hover:shadow-[0_20px_40px_rgba(227,77,42,0.18)] dark:hover:shadow-[0_20px_40px_rgba(59,130,246,0.22)] transition-all duration-500 cursor-default min-w-[85vw] sm:min-w-[calc(50%-12px)] lg:min-w-[calc(33.333%-16px)] xl:min-w-[calc(25%-18px)] flex-shrink-0 snap-start overflow-hidden bg-white dark:bg-slate-900/40"
                             >
                                 {/* Ambient Hover Glow: Orange radial in Light Mode, Blue radial in Dark Mode */}
-                                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-[radial-gradient(circle_at_center,rgba(249,115,22,0.25),transparent_70%)] dark:bg-[radial-gradient(circle_at_center,rgba(37,99,235,0.35),transparent_70%)] transition-opacity duration-700 pointer-events-none" />
+                                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-[radial-gradient(circle_at_center,rgba(227,77,42,0.25),transparent_70%)] dark:bg-[radial-gradient(circle_at_center,rgba(37,99,235,0.35),transparent_70%)] transition-opacity duration-700 pointer-events-none" />
 
                                 <div className="relative inline-block mb-4 mt-1">
-                                    <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full border-2 border-secondary/20 p-1 mx-auto bg-white dark:bg-slate-950 transition-all duration-700 group-hover:scale-[1.22] group-hover:border-secondary dark:group-hover:border-blue-500 shadow-inner overflow-hidden group-hover:shadow-[0_0_30px_rgba(249,115,22,0.55)] dark:group-hover:shadow-[0_0_30px_rgba(37,99,235,0.75)]">
+                                    <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full border-2 border-secondary/20 p-1 mx-auto bg-white dark:bg-slate-950 transition-all duration-700 group-hover:scale-[1.22] group-hover:border-secondary dark:group-hover:border-blue-500 shadow-inner overflow-hidden group-hover:shadow-[0_0_30px_rgba(227,77,42,0.55)] dark:group-hover:shadow-[0_0_30px_rgba(37,99,235,0.75)]">
                                         <img src={feature.image} alt={feature.title} className="w-full h-full object-cover rounded-full" />
                                     </div>
                                     <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-8 h-8 rounded-xl bg-white dark:bg-slate-950 border border-[#e2e8f0] dark:border-white/10 text-secondary dark:text-blue-400 flex items-center justify-center shadow-md transition-all duration-500 group-hover:bg-secondary dark:group-hover:bg-blue-500 group-hover:text-white group-hover:border-secondary dark:group-hover:border-blue-500 group-hover:scale-110 z-10 rotate-3 group-hover:rotate-0">
