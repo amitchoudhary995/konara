@@ -146,7 +146,7 @@ const Header = () => {
               aria-label="Konara BiPV - Home"
             >
               <img
-                src={theme === 'light' ? '/logo.svg' : '/logo-white.svg'}
+                src={theme === 'light' ? '/logo.svg' : '/logo.svg'}
                 alt="Konara Logo"
                 className={`object-contain transition-all hover:scale-105 duration-500 ${isScrolled
                   ? 'h-8 lg:h-10 '

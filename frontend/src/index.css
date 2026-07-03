@@ -102,7 +102,7 @@
 }
 
 /* Hero slide-in keyframes */
-@keyframes slideUp {
+/* @keyframes slideUp {
   0% {
     opacity: 0;
     transform: translateY(40px);
@@ -136,4 +136,72 @@
   50% {
     box-shadow: 0 0 20px 6px rgba(197, 232, 71, 0.15);
   }
+} */
+
+
+
+
+/* Smooth slide-up */
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.98);
+  }
+
+  60% {
+    opacity: 0.7;
+    transform: translateY(10px) scale(1.02);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Smooth fade-in from left */
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px) scale(0.95);
+  }
+
+  60% {
+    opacity: 0.7;
+    transform: translateX(-10px) scale(1.02);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+/* Glow pulse with smoother rhythm */
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(197, 232, 71, 0.4);
+  }
+
+  50% {
+    box-shadow: 0 0 25px 8px rgba(197, 232, 71, 0.2);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(197, 232, 71, 0.4);
+  }
+}
+
+/* Example usage */
+.hero-title {
+  animation: slideUp 0.8s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+}
+
+.hero-subtitle {
+  animation: fadeInLeft 1s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+.cta-button {
+  animation: pulseGlow 2s ease-in-out infinite;
 }
