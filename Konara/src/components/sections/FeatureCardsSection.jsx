@@ -12,12 +12,12 @@ import {
 
 
 const features = [
-    { icon: Cpu, title: 'Smart Integration', desc: 'Transparent solar windows and skylights that bring natural light while generating clean energy.', image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800&auto=format&fit=crop' },
-    { icon: Timer, title: 'Quick & Easy Installation', desc: 'Our BIPV systems are made for fast, smooth fitting in any home or building.', image: 'https://images.unsplash.com/photo-1504307651254-35680f356f58?q=80&w=800&auto=format&fit=crop' },
-    { icon: PenTool, title: 'Custom Design Solutions', desc: 'Custom solar glass for façades, balconies, decks, and railings built to suit your aesthetic needs.', image: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=800&auto=format&fit=crop' },
-    { icon: Settings, title: 'Builder-Friendly Technology', desc: 'Flexible BIPV modules suited for all project scales with professional technical support.', image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=800&auto=format&fit=crop' },
-    { icon: Shield, title: 'High Durability', desc: 'Long-lasting solar glass built to withstand weather, ensure safety, and deliver consistent performance.', image: 'https://images.unsplash.com/photo-1616423640778-28d1b53229bd?q=80&w=800&auto=format&fit=crop' },
-    { icon: Leaf, title: 'Sustainable & Stylish', desc: 'Energy-efficient solutions that enhance modern architecture without compromising design.', image: 'https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?q=80&w=800&auto=format&fit=crop' },
+    { icon: Cpu, title: 'Smart Integration', desc: 'Transparent solar windows and skylights that bring natural light while generating clean energy.', image: '/images/features/smart_integration.png' },
+    { icon: Timer, title: 'Quick & Easy Installation', desc: 'Our BIPV systems are made for fast, smooth fitting in any home or building.', image: '/images/features/easy_installation.png' },
+    { icon: PenTool, title: 'Custom Design Solutions', desc: 'Custom solar glass for façades, balconies, decks, and railings built to suit your aesthetic needs.', image: '/images/features/custom_design.png' },
+    { icon: Settings, title: 'Builder-Friendly Technology', desc: 'Flexible BIPV modules suited for all project scales with professional technical support.', image: '/images/features/builder_friendly.png' },
+    { icon: Shield, title: 'High Durability', desc: 'Long-lasting solar glass built to withstand weather, ensure safety, and deliver consistent performance.', image: '/images/features/high_durability.png' },
+    { icon: Leaf, title: 'Sustainable & Stylish', desc: 'Energy-efficient solutions that enhance modern architecture without compromising design.', image: '/images/features/sustainable_stylish.png' },
 ];
 
 const DOT_COUNT = 5;

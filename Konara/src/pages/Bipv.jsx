@@ -35,14 +35,14 @@ const Bipv = () => {
             </Helmet>
 
             {/* Parallax Hero Section */}
-            <section className="relative h-[300px] md:h-[400px] w-full flex items-center justify-center overflow-hidden">
+            <section className="relative h-[400px] md:h-[500px] w-full flex items-center justify-center overflow-hidden">
                 <div
                     ref={bgRef}
                     className="absolute left-0 right-0 w-full"
                     style={{
                         height: '130%',
                         top: '-15%',
-                        backgroundImage: 'url("https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?q=80&w=2072&auto=format&fit=crop")',
+                        backgroundImage: 'url("https://images.unsplash.com/photo-1730807908064-c087959dd52c?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")',
                         backgroundPosition: 'center',
                         backgroundSize: 'cover',
                         backgroundRepeat: 'no-repeat',
@@ -50,45 +50,66 @@ const Bipv = () => {
                     }}
                 />
 
-                <div className="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-900/80 to-slate-900/40" />
+                {/* Dark/Light Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/80 to-white/50 dark:from-slate-900/90 dark:via-slate-900/60 dark:to-slate-900/30" />
 
-                <div className="relative z-10 text-center px-4 mt-8 max-w-4xl mx-auto">
-                    <h1 className="text-4xl md:text-5xl lg:text-7xl font-black text-white tracking-tight mb-6 drop-shadow-xl leading-tight">
-                        The Future of <span className="text-secondary">Solar</span> Architecture
+                {/* Content */}
+                <div className="relative z-10 text-center px-4">
+                    <h1 className="text-5xl md:text-6xl font-black text-slate-900 dark:text-white tracking-tight mb-4 drop-shadow-md">
+                        BIPV Solutions
                     </h1>
-                    <div className="flex items-center justify-center gap-3 text-white/90 text-sm md:text-base font-bold tracking-widest uppercase">
-                        <Link to="/" className="hover:text-secondary transition-colors">Home</Link>
-                        <span className="text-white/30">•</span>
-                        <span className="text-secondary">BIPV Solutions</span>
+                    <div className="flex items-center justify-center gap-2 text-slate-700 dark:text-white/90 text-sm md:text-base font-bold">
+                        <Link to="/" className="hover:text-primary dark:hover:text-secondary transition-colors">Home</Link>
+                        <span className="text-slate-400 dark:text-white/50">/</span>
+                        <span>BIPV Solutions</span>
                     </div>
                 </div>
             </section>
 
             {/* Intro Section - The Vision */}
-            <section className="py-10 md:py-16 px-4 sm:px-8 max-w-[1400px] mx-auto w-full relative z-10 -mt-24">
-                <div className="bg-white dark:bg-slate-900/80 backdrop-blur-2xl border border-slate-200 dark:border-white/10 rounded-[2.5rem] p-8 md:p-12 shadow-2xl relative overflow-hidden group">
-                    <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-secondary/5 rounded-full blur-[100px] pointer-events-none -translate-y-1/2 translate-x-1/3" />
+            <section className="py-16 sm:py-24 bg-background relative overflow-hidden border-b border-border transition-colors duration-500">
+                {/* Ambient Background Glows */}
+                <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-secondary/5 rounded-full blur-[150px] pointer-events-none -translate-y-1/2 translate-x-1/3" />
+                <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px] pointer-events-none translate-y-1/3 -translate-x-1/3" />
 
-                    <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-                        <div>
-                            <div className="inline-flex items-center gap-3 px-4 py-1.5 rounded-full bg-secondary/10 dark:bg-secondary/20 border border-secondary/20 mb-8">
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+                        {/* Left Column: Content */}
+                        <div className="flex flex-col items-start">
+                            <div className="inline-flex items-center gap-3 px-4 py-1.5 rounded-full bg-secondary/10 dark:bg-secondary/20 border border-secondary/20 mb-6 shadow-sm backdrop-blur-md">
                                 <span className="w-2 h-2 rounded-full bg-secondary animate-pulse" />
                                 <span className="text-secondary font-bold tracking-widest uppercase text-xs">Transforming Energy</span>
                             </div>
-                            <h2 className="text-3xl md:text-4xl font-black text-primary dark:text-white leading-tight mb-8">
-                                At Solastra, we are transforming how structures interact with energy through Building Integrated Photovoltaics.
+
+                            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-primary dark:text-white leading-[1.1] tracking-tight mb-6">
+                                At Solastra, we are transforming how structures <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-amber-500 drop-shadow-sm">interact with energy</span> through BIPV.
                             </h2>
-                            <p className="text-lg md:text-xl text-slate-600 dark:text-slate-400 leading-relaxed font-medium">
-                                Our transparent solar panels seamlessly combine into the physical structure of homes, services, and commercial spaces, turning ordinary shells into powerful, clean energy creators. BIPVs are not just solar products; they are <strong className="text-primary dark:text-white">architectural solutions, energy means, and sustainability enhancers</strong>, all in one.
-                            </p>
+
+                            <div className="space-y-5 text-slate-600 dark:text-slate-300 text-lg leading-relaxed font-medium">
+                                <p>
+                                    Our transparent solar panels seamlessly combine into the physical structure of homes, services, and commercial spaces, turning ordinary shells into powerful, clean energy creators.
+                                </p>
+                                <p>
+                                    BIPVs are not just solar products; they are <strong className="text-primary dark:text-white font-bold">architectural solutions, energy means, and sustainability enhancers</strong>, all in one.
+                                </p>
+                            </div>
                         </div>
-                        <div className="relative h-[300px] md:h-[400px] rounded-[2rem] overflow-hidden shadow-2xl border border-white/10 group-hover:shadow-[0_0_40px_rgba(234,88,12,0.15)] transition-all duration-500">
-                            <img
-                                src="https://plus.unsplash.com/premium_photo-1661952328751-a958e0a1f7fb?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                alt="Modern BIPV Architecture"
-                                className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-tr from-slate-900/80 via-slate-900/20 to-transparent pointer-events-none" />
+
+                        {/* Right Column: Visual Composition */}
+                        <div className="relative flex justify-center items-center py-10 lg:py-0 mt-10 lg:mt-0">
+                            <div className="relative w-full max-w-lg z-10">
+                                {/* Decorative Outline Rectangle (Behind) */}
+                                <div className="absolute top-10 -left-6 w-[70%] h-[85%] border-[3px] border-secondary/60 dark:border-secondary/40 z-0 hidden sm:block"></div>
+
+                                {/* Main Large Image */}
+                                <div className="relative aspect-[3/4] w-[80%] bg-slate-200 dark:bg-slate-800 overflow-hidden shadow-xl z-10 sm:ml-8 mx-auto">
+                                    <img
+                                        src="https://images.unsplash.com/photo-1724994727393-1040b798a228?q=80&w=863&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                        alt="Modern BIPV Architecture"
+                                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000"
+                                    />
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -220,7 +241,7 @@ const Bipv = () => {
                         {/* Homeowners */}
                         <div className="bg-white/80 dark:bg-slate-900/60 backdrop-blur-xl border border-slate-200 dark:border-white/10 rounded-[2rem] p-10 shadow-2xl relative overflow-hidden group hover:-translate-y-3 transition-all duration-500 hover:shadow-secondary/20 hover:border-secondary/50">
                             <div className="absolute top-0 right-0 w-32 h-32 bg-secondary/10 dark:bg-secondary/20 rounded-full blur-3xl group-hover:bg-secondary/30 transition-colors duration-500 pointer-events-none" />
-                            
+
                             <div className="w-16 h-16 bg-gradient-to-br from-orange-400 to-secondary rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-secondary/30 group-hover:scale-110 transition-transform duration-500 relative z-10">
                                 <Home className="text-white w-8 h-8" />
                             </div>
@@ -240,7 +261,7 @@ const Bipv = () => {
                         {/* Architects */}
                         <div className="bg-white/80 dark:bg-slate-900/60 backdrop-blur-xl border border-slate-200 dark:border-white/10 rounded-[2rem] p-10 shadow-2xl relative overflow-hidden group hover:-translate-y-3 transition-all duration-500 hover:shadow-blue-500/20 hover:border-blue-500/50">
                             <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 dark:bg-blue-500/20 rounded-full blur-3xl group-hover:bg-blue-500/30 transition-colors duration-500 pointer-events-none" />
-                            
+
                             <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-blue-500/30 group-hover:scale-110 transition-transform duration-500 relative z-10">
                                 <Compass className="text-white w-8 h-8" />
                             </div>
@@ -260,7 +281,7 @@ const Bipv = () => {
                         {/* Commercial */}
                         <div className="bg-white/80 dark:bg-slate-900/60 backdrop-blur-xl border border-slate-200 dark:border-white/10 rounded-[2rem] p-10 shadow-2xl relative overflow-hidden group hover:-translate-y-3 transition-all duration-500 hover:shadow-amber-500/20 hover:border-amber-500/50">
                             <div className="absolute top-0 right-0 w-32 h-32 bg-amber-500/10 dark:bg-amber-500/20 rounded-full blur-3xl group-hover:bg-amber-500/30 transition-colors duration-500 pointer-events-none" />
-                            
+
                             <div className="w-16 h-16 bg-gradient-to-br from-amber-400 to-amber-600 rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-amber-500/30 group-hover:scale-110 transition-transform duration-500 relative z-10">
                                 <Building2 className="text-white w-8 h-8" />
                             </div>

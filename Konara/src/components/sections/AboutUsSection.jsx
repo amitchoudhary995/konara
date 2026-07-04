@@ -14,37 +14,37 @@ const differentiators = [
         icon: Sun,
         title: 'Smart Integration',
         desc: 'Transparent solar windows and skylights that bring natural light while generating clean energy.',
-        image: 'https://images.unsplash.com/photo-1559302504-ceaefa2abcf5?q=80&w=600&auto=format&fit=crop'
+        image: '/images/features/smart_integration.png'
     },
     {
         icon: Zap,
         title: 'Quick & Easy Installation',
         desc: 'Our BIPV systems are made for fast, smooth fitting in any home or building.',
-        image: 'https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?q=80&w=600&auto=format&fit=crop'
+        image: '/images/features/easy_installation.png'
     },
     {
         icon: PenTool,
         title: 'Custom Design Solutions',
         desc: 'Custom solar glass for façades, balconies, decks, and railings — built to suit your aesthetic needs.',
-        image: 'https://images.unsplash.com/photo-1605810230434-7631ac76ec81?q=80&w=600&auto=format&fit=crop'
+        image: '/images/features/custom_design.png'
     },
     {
         icon: HardHat,
         title: 'Builder-Friendly Technology',
         desc: 'Flexible BIPV modules suited for all project scales with professional technical support.',
-        image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=600&auto=format&fit=crop'
+        image: '/images/features/builder_friendly.png'
     },
     {
         icon: Shield,
         title: 'High Durability',
         desc: 'Long-lasting solar glass built to withstand weather, ensure safety, and deliver consistent performance.',
-        image: 'https://images.unsplash.com/photo-1508514177221-188b1c77eca2?q=80&w=600&auto=format&fit=crop'
+        image: '/images/features/high_durability.png'
     },
     {
         icon: Leaf,
         title: 'Sustainable & Stylish',
         desc: 'Energy-efficient solutions that enhance modern architecture without compromising design.',
-        image: 'https://images.unsplash.com/photo-1497440001374-f26997328c1b?q=80&w=600&auto=format&fit=crop'
+        image: '/images/features/sustainable_stylish.png'
     }
 ];
 
@@ -97,9 +97,9 @@ const AboutUsSection = () => {
                             </span>
                         </div>
 
-                        <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-primary dark:text-white leading-[1.1] tracking-tight mb-6">
-                            Powering Buildings <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-amber-500 drop-shadow-sm">
+                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-primary dark:text-white leading-[1.1] tracking-tight mb-6">
+                            Powering Buildings
+                            <span className="mx-2 text-transparent bg-clip-text bg-gradient-to-r from-secondary to-amber-500 drop-shadow-sm">
                                 With Glass.
                             </span>
                         </h2>
@@ -178,14 +178,14 @@ const AboutUsSection = () => {
                     </div>
                 </div>
 
-                {/* Bottom Row: Differentiators */}
-                <div className="flex flex-col items-center relative" style={reveal(300)}>
+                {/* Differentiators Matrix Grid - Compact layout */}
+                <div className="flex flex-col items-center relative mt-6" style={reveal(300)}>
                     <div className="absolute inset-0 bg-gradient-to-b from-slate-50 to-transparent dark:from-slate-900/50 rounded-[3rem] -z-10 pointer-events-none" />
 
-                    <h3 className="text-3xl sm:text-4xl font-black text-primary dark:text-white mb-12 text-center pt-10">
+                    <h3 className="text-3xl sm:text-4xl font-black text-primary dark:text-white mb-8 text-center pt-6">
                         What Makes Solastra <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-amber-500">Different</span>
                     </h3>
-                    <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-4 sm:gap-6 w-full pb-10 px-4 sm:px-8">
+                    <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-3 sm:gap-4 w-full pb-6 px-2 sm:px-4">
                         {differentiators.map((item, idx) => (
                             <div
                                 key={idx}
@@ -193,7 +193,7 @@ const AboutUsSection = () => {
                                 style={{ transitionDelay: `${idx * 50}ms` }}
                             >
                                 {/* Top Text Section */}
-                                <div className="p-4 sm:p-5 pb-8 flex flex-col flex-1 relative bg-white dark:bg-slate-950 z-10">
+                                <div className="p-3 sm:p-4 pb-6 flex flex-col flex-1 relative bg-white dark:bg-slate-950 z-10">
                                     <div className="mb-4 text-secondary group-hover:scale-110 transition-transform duration-500 origin-left">
                                         <item.icon size={32} strokeWidth={1.5} />
                                     </div>

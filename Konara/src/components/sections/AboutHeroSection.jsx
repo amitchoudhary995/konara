@@ -45,17 +45,17 @@ const AboutHeroSection = () => {
                 }}
             />
 
-            {/* Dark Overlay - left side darker, right side lighter gradient */}
-            <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-slate-900/60 to-slate-900/30" />
+            {/* Dark/Light Overlay - left side darker, right side lighter gradient */}
+            <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/80 to-white/50 dark:from-slate-900/90 dark:via-slate-900/60 dark:to-slate-900/30" />
 
             {/* Content */}
             <div className="relative z-10 text-center px-4">
-                <h1 className="text-5xl md:text-6xl font-black text-white tracking-tight mb-4 drop-shadow-md">
+                <h1 className="text-5xl md:text-6xl font-black text-slate-900 dark:text-white tracking-tight mb-4 drop-shadow-md">
                     About Us
                 </h1>
-                <div className="flex items-center justify-center gap-2 text-white/90 text-sm md:text-base font-medium">
-                    <Link to="/" className="hover:text-secondary transition-colors">Home</Link>
-                    <span className="text-white/50">/</span>
+                <div className="flex items-center justify-center gap-2 text-slate-700 dark:text-white/90 text-sm md:text-base font-bold">
+                    <Link to="/" className="hover:text-primary dark:hover:text-secondary transition-colors">Home</Link>
+                    <span className="text-slate-400 dark:text-white/50">/</span>
                     <span>About Us</span>
                 </div>
             </div>

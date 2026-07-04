@@ -1,30 +1,30 @@
 import { useEffect, useRef, useState } from 'react';
-import { Layers, PenTool, Zap, Headset, ArrowUpRight, Sun } from 'lucide-react';
+import { Users, TrendingUp, Cpu, Wrench, ArrowUpRight, Sun } from 'lucide-react';
 
 const advantages = [
     {
-        title: 'Architectural Synergy',
-        desc: "We don't just add panels; we replace conventional building materials with intelligent, power-generating surfaces that integrate flawlessly.",
-        icon: Layers,
-        bgImage: 'https://plus.unsplash.com/premium_photo-1682145621890-61a61ab83b4f?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        title: 'Specialized BIPV solar consultation',
+        desc: "Comprehensive EPC-driven guidance to help you select the right BIPV systems that integrate seamlessly into your building's structure and energy plan.",
+        icon: Users,
+        bgImage: 'https://plus.unsplash.com/premium_photo-1682145621890-61a61ab83b4f?q=80&w=870&auto=format&fit=crop',
     },
     {
-        title: 'Unbound Aesthetics',
-        desc: 'Unprecedented design freedom. Available in bespoke sizes, dynamic opacities, and a full spectrum of architectural colors.',
-        icon: PenTool,
-        bgImage: 'https://plus.unsplash.com/premium_photo-1664476579374-3332d1268cab?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        title: 'Return on Investment & feasibility analysis',
+        desc: 'EPC-backed financial and technical assessments to determine project viability, expected savings, and long-term performance outcomes.',
+        icon: TrendingUp,
+        bgImage: 'https://plus.unsplash.com/premium_photo-1664476579374-3332d1268cab?q=80&w=870&auto=format&fit=crop',
     },
     {
-        title: 'Peak Yield Technology',
-        desc: 'Engineered with next-generation monocrystalline cells, delivering industry-leading energy density per square meter.',
-        icon: Zap,
-        bgImage: 'https://plus.unsplash.com/premium_photo-1663091598847-9d162258b63f?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        title: 'Electrical system procurement & solar design',
+        desc: 'Complete EPC support in sourcing electrical components and creating efficient solar system designs tailored to your project requirements.',
+        icon: Cpu,
+        bgImage: 'https://plus.unsplash.com/premium_photo-1663091598847-9d162258b63f?q=80&w=870&auto=format&fit=crop',
     },
     {
-        title: 'Turnkey Integration',
-        desc: 'A seamless journey from visionary engineering and manufacturing to flawless installation and final grid connection.',
-        icon: Headset,
-        bgImage: 'https://plus.unsplash.com/premium_photo-1682148196781-8bbcdfd7f537?q=80&w=872&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        title: 'Component installation & system testing',
+        desc: 'End-to-end EPC execution, including professional installation and rigorous system testing, ensuring optimal performance and long-term reliability.',
+        icon: Wrench,
+        bgImage: 'https://plus.unsplash.com/premium_photo-1682148196781-8bbcdfd7f537?q=80&w=872&auto=format&fit=crop',
     },
 ];
 
@@ -103,7 +103,7 @@ const AdvantageSection = () => {
                         return (
                             <article
                                 key={item.title}
-                                style={reveal(100 + idx * 80)}
+                                style={{ ...reveal(100 + idx * 80), fontFamily: "'Open Sans', sans-serif" }}
                                 className="group flex flex-col overflow-hidden rounded-3xl bg-white dark:bg-slate-900/60 border border-slate-200/60 dark:border-white/10 shadow-[0_8px_30px_rgb(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(227,77,42,0.12)] dark:hover:shadow-[0_20px_45px_rgba(37,99,235,0.15)] hover:border-secondary/40 dark:hover:border-blue-500/40 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-2 focus-within:shadow-2xl focus-within:-translate-y-2 focus-within:ring-2 focus-within:ring-secondary focus-within:ring-offset-4 flex-1"
                                 tabIndex={0}
                             >

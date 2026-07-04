@@ -77,6 +77,7 @@ const TopInfoBar = memo(function TopInfoBar() {
 // --- Main Header ---
 const Header = () => {
   const { theme, toggleTheme } = useTheme();
+  
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const menuButtonRef = useRef(null);
@@ -122,8 +123,11 @@ const Header = () => {
                       to={link.path}
                       className={({ isActive }) =>
                         `font-nav text-[13px] font-semibold tracking-wider uppercase transition-all duration-300 relative py-2 focus-visible:outline-2 focus-visible:outline-secondary group ${isActive
-                          ? 'text-secondary'
-                          : (isScrolled ? 'text-text hover:text-secondary' : 'text-primary dark:text-white/80 hover:text-secondary dark:hover:text-white')
+                          ? 'text-secondary drop-shadow-sm'
+                          : (isScrolled 
+                              ? 'text-text hover:text-secondary' 
+                              : 'text-primary dark:text-white/80 hover:text-secondary dark:hover:text-white'
+                            )
                         }`
                       }
                       aria-current={({ isActive }) => (isActive ? 'page' : undefined)}
@@ -156,20 +160,26 @@ const Header = () => {
               />
             </Link>
 
-            <div className="hidden lg:flex items-center gap-5">
+              <div className="hidden lg:flex items-center gap-5">
               <div className="flex items-center gap-2.5">
-                <div className={`w-8 h-8 rounded-full border flex items-center justify-center transition-colors duration-300 ${isScrolled ? 'border-secondary/30 text-secondary' : 'border-primary/20 dark:border-white/20 text-primary dark:text-white'
+                <div className={`w-8 h-8 rounded-full border flex items-center justify-center transition-colors duration-300 ${isScrolled 
+                    ? 'border-secondary/30 text-secondary' 
+                    : 'border-primary/20 dark:border-white/20 text-primary dark:text-white'
                   }`}>
                   <Phone size={13} aria-hidden="true" />
                 </div>
                 <div className="hidden xl:block">
-                  <p className={`text-[8px] font-bold uppercase tracking-widest ${isScrolled ? 'text-muted' : 'text-primary/60 dark:text-white/60'
+                  <p className={`text-[8px] font-bold uppercase tracking-widest ${isScrolled 
+                      ? 'text-muted' 
+                      : 'text-primary/60 dark:text-white/60'
                     }`}>
                     Call Us Anytime
                   </p>
                   <a
                     href="tel:+911234567890"
-                    className={`font-nav text-xs font-bold transition-colors focus-visible:outline-2 focus-visible:outline-secondary rounded-sm ${isScrolled ? 'text-text hover:text-secondary' : 'text-primary dark:text-white hover:text-secondary'
+                    className={`font-nav text-xs font-bold transition-colors focus-visible:outline-2 focus-visible:outline-secondary rounded-sm ${isScrolled 
+                        ? 'text-text hover:text-secondary' 
+                        : 'text-primary dark:text-white hover:text-secondary'
                       }`}
                   >
                     +91 123 456 7890
@@ -200,7 +210,9 @@ const Header = () => {
             <div className="flex items-center gap-3 lg:hidden">
               <button
                 ref={menuButtonRef}
-                className={`p-2 focus-visible:outline-2 focus-visible:outline-secondary rounded transition-colors duration-300 ${isScrolled ? 'text-text' : 'text-primary dark:text-white'
+                className={`p-2 focus-visible:outline-2 focus-visible:outline-secondary rounded transition-colors duration-300 ${isScrolled 
+                    ? 'text-text' 
+                    : 'text-primary dark:text-white'
                   }`}
                 onClick={toggleMenu}
                 aria-expanded={isMenuOpen}

@@ -30,8 +30,8 @@ const applications = [
         category: 'PV Glass',
         yield: 92,
         specs: {
-            Customization_Options: 'Transparency, shape, size/dimensions, junction box placement, and colour tint can be customized as per requirements.',
             Available_Technologies: 'Monocrystalline , CdTe',
+            Customization_Options: 'Transparency, shape, size/dimensions, junction box placement, and colour tint can be customized as per requirements.',
             durability: 'High-Impact Safety Glass',
             warranty: '25 Years Power Output',
             compliance: 'IEC 61215, ISO 9001',
@@ -45,6 +45,7 @@ const applications = [
         category: 'PV Glass',
         yield: 78,
         specs: {
+            Available_Technologies: 'Monocrystalline',
             Customization_Options: 'Colour/pattern/image, junction box placement, shape & size can be customized as per requirements.',
             transmittance: 'Semi-Transparent (30%)',
             durability: 'Double Glazed Tempered',
@@ -60,8 +61,7 @@ const applications = [
         category: 'PV Glass',
         yield: 85,
         specs: {
-            Available_Technologies
-                : 'Monocrystalline',
+            Available_Technologies: 'Monocrystalline',
             Customization_Options: 'Transparency, colour tint, and cell patterning can be customized as per requirements.',
             durability: 'Heat-Strengthened Laminated',
             warranty: '25 Years Performance',
@@ -76,8 +76,8 @@ const applications = [
         category: 'Tiles',
         yield: 65,
         specs: {
+            Available_Technologies: 'Monocrystalline',
             Customization_Options: 'Size, shape, light transmission, weight, coefficient of friction, and colour/tint can be customized as per requirements.',
-            Available_Technology: 'Monocrystalline',
             durability: 'Safety Laminated Railing Grade',
             warranty: '15 Years Product Warranty',
             compliance: 'EN 12600 Impact Rating',
@@ -91,6 +91,7 @@ const applications = [
         category: 'Flex',
         yield: 95,
         specs: {
+            Available_Technologies: 'Thin-Film Flex',
             output: '210 W/m²',
             transmittance: 'Opaque Textured',
             durability: 'Class 4 Hail Impact Rated',
@@ -106,6 +107,7 @@ const applications = [
         category: 'Solar Panels',
         yield: 70,
         specs: {
+            Available_Technologies: 'Monocrystalline',
             output: '95 W/m²',
             transmittance: 'Clear Vision (45%)',
             durability: 'Sound Insulation Low-E Double Panel',
@@ -115,17 +117,6 @@ const applications = [
     },
 ];
 
-const topYield = Math.max(...applications.map((a) => a.yield));
-
-function YieldBadge({ value }) {
-    return (
-        <div className="flex items-center gap-1 bg-secondary/10 dark:bg-secondary/20 text-secondary px-2.5 py-1 rounded-full text-xs font-bold border border-secondary/20 shadow-sm">
-            <Zap size={13} className="fill-secondary" />
-            <span className="tabular-nums">{value}%</span>
-            <span className="text-[10px] text-muted-foreground font-semibold">Yield</span>
-        </div>
-    );
-}
 
 const ImageGridSection = () => {
     const [activeFilter, setActiveFilter] = useState('all');
@@ -213,35 +204,38 @@ const ImageGridSection = () => {
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 max-w-7xl">
 
                 {/* Header */}
-                <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-8">
+                <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-8 lg:gap-12 mb-10">
                     <div className="max-w-2xl">
-                        <div className="inline-flex items-center gap-3 justify-center mb-4 px-4 py-1.5 rounded-full bg-secondary/10 dark:bg-secondary/20 border border-secondary/20 shadow-sm backdrop-blur-md">
+                        <div className="inline-flex items-center gap-3 justify-center mb-5 px-4 py-1.5 rounded-full bg-secondary/10 dark:bg-secondary/20 border border-secondary/20 shadow-sm backdrop-blur-md">
                             <span className="w-2 h-2 rounded-full bg-secondary animate-pulse" />
                             <p className="text-secondary font-bold tracking-[0.15em] uppercase text-xs font-nav">
                                 Application Portfolio
                             </p>
                         </div>
 
-                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-primary dark:text-white leading-[1] ">
+                        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-black text-primary dark:text-white leading-[1.05] tracking-tight mb-2">
                             Current Product Offerings
-                            <span className="text-slate-600 dark:text-slate-400 text-2xl sm:text-3xl font-bold mt-2 block">
-                                Glass That Generates Electricity Like <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-amber-500 drop-shadow-sm"> A Solar Panel</span>
+                            <span className="block mt-4 text-xl sm:text-2xl lg:text-3xl font-medium text-slate-500 dark:text-slate-400 leading-snug">
+                                Glass That Generates Electricity Like <br className="hidden md:block" />
+                                <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-secondary to-orange-400 drop-shadow-sm">A Solar Panel.</span>
                             </span>
                         </h2>
                     </div>
-                    <p className="text-slate-600 dark:text-slate-400 text-base sm:text-lg leading-relaxed max-w-lg lg:pb-1 font-medium">
-                        We offer a wide range of Building Integrated Photovoltaic (BIPV) products designed to blend seamlessly into modern architecture. Our solar glass products are developed for high performance, aesthetics, and complete design flexibility.
-                    </p>
+                    <div className="lg:max-w-[450px] lg:border-l-2 lg:border-secondary/30 lg:pl-6">
+                        <p className="text-slate-600 dark:text-slate-400 text-base sm:text-lg leading-relaxed font-medium">
+                            We offer a wide range of Building Integrated Photovoltaic (BIPV) products designed to blend seamlessly into modern architecture. Our solar glass products are developed for high performance, aesthetics, and complete design flexibility.
+                        </p>
+                    </div>
                 </div>
 
                 {/* Segmented Tab Filter Bar (Premium horizontal scroll on mobile) */}
-                <div className="flex overflow-x-auto p-1.5 rounded-2xl bg-slate-100/80 dark:bg-white/5 border border-slate-200/50 dark:border-white/5 backdrop-blur-md mb-8 w-full max-w-full relative snap-x scrollbar-hide" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
+                <div className="inline-flex overflow-x-auto p-1 rounded-full bg-slate-100/90 dark:bg-slate-800/80 border border-slate-200/80 dark:border-white/5 backdrop-blur-xl mb-10 w-fit max-w-full relative snap-x scrollbar-hide shadow-inner" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
                     <button
                         type="button"
                         onClick={() => setActiveFilter('all')}
-                        className={`px-6 py-3 rounded-xl text-xs font-bold uppercase tracking-wider transition-all duration-300 whitespace-nowrap shrink-0 snap-center ${activeFilter === 'all'
-                            ? 'bg-white dark:bg-slate-900 text-primary dark:text-white shadow-md border border-[#e2e8f0] dark:border-white/10'
-                            : 'text-slate-500 dark:text-slate-400 hover:text-secondary'
+                        className={`px-5 py-2 rounded-full text-[11px] font-bold uppercase tracking-wider transition-all duration-300 whitespace-nowrap shrink-0 snap-center ${activeFilter === 'all'
+                            ? 'bg-white dark:bg-slate-900 text-secondary dark:text-blue-400 shadow-sm border border-slate-200/80 dark:border-white/10'
+                            : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-200/50 dark:hover:bg-white/5'
                             }`}
                     >
                         All Applications
@@ -254,12 +248,12 @@ const ImageGridSection = () => {
                                 key={key}
                                 type="button"
                                 onClick={() => setActiveFilter(key)}
-                                className={`inline-flex items-center gap-2 px-6 py-3 rounded-xl text-xs font-bold uppercase tracking-wider transition-all duration-300 whitespace-nowrap shrink-0 snap-center ${isActive
-                                    ? 'bg-white dark:bg-slate-900 text-primary dark:text-white shadow-md border border-[#e2e8f0] dark:border-white/10'
-                                    : 'text-slate-500 dark:text-slate-400 hover:text-secondary'
+                                className={`inline-flex items-center gap-1.5 px-5 py-2 rounded-full text-[11px] font-bold uppercase tracking-wider transition-all duration-300 whitespace-nowrap shrink-0 snap-center ${isActive
+                                    ? 'bg-white dark:bg-slate-900 text-secondary dark:text-blue-400 shadow-sm border border-slate-200/80 dark:border-white/10'
+                                    : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-200/50 dark:hover:bg-white/5'
                                     }`}
                             >
-                                <Icon size={14} className={isActive ? 'text-secondary' : 'text-slate-400 dark:text-slate-500'} />
+                                <Icon size={12} className={isActive ? 'text-secondary dark:text-blue-400' : 'text-slate-400 dark:text-slate-500'} />
                                 {cat.label}
                             </button>
                         );
@@ -270,83 +264,77 @@ const ImageGridSection = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {filtered.map((app, index) => {
                         const Icon = CATEGORIES[app.category].icon;
-                        const isTop = app.yield === topYield;
                         return (
                             <div
                                 key={app.id}
                                 style={cardReveal(index)}
-                                className="group flex flex-col rounded-[2rem] overflow-hidden bg-white dark:bg-slate-900/40 backdrop-blur-xl border border-slate-200/50 dark:border-white/10 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_-15px_rgba(234,88,12,0.2)] hover:border-secondary/40 transition-all duration-500 hover:-translate-y-2 flex-1 relative"
+                                className="flex flex-col flex-1"
                             >
-                                {/* Subtle inner glow on hover */}
-                                <div className="absolute inset-0 bg-gradient-to-b from-secondary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-20" />
+                                <div
+                                    className="group flex flex-col rounded-[2rem] overflow-hidden bg-white dark:bg-slate-900/40 backdrop-blur-xl border border-slate-200/50 dark:border-white/10 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_-15px_rgba(234,88,12,0.2)] hover:border-secondary/40 transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] hover:-translate-y-2 flex-1 relative will-change-transform"
+                                >
+                                    {/* Subtle inner glow on hover */}
+                                    <div className="absolute inset-0 bg-gradient-to-b from-secondary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-20" />
 
-                                {/* Image Box */}
-                                <div className="relative aspect-[16/10] overflow-hidden bg-muted">
-                                    <div className="absolute inset-0 bg-secondary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-10 pointer-events-none mix-blend-overlay" />
-                                    <img
-                                        src={app.image}
-                                        alt={app.title}
-                                        loading="lazy"
-                                        className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
-                                    />
-                                    {/* Category tag */}
-                                    <div className="absolute top-4 left-4 z-10">
-                                        <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/95 dark:bg-slate-950/95 backdrop-blur-md border border-white/20 dark:border-white/10 text-[10px] font-bold uppercase tracking-wider text-primary dark:text-white shadow-md">
-                                            <Icon size={11} className="text-secondary" />
-                                            {CATEGORIES[app.category].label}
-                                        </span>
-                                    </div>
-
-                                    {isTop && (
-                                        <div className="absolute top-4 right-4 z-10">
-                                            <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-secondary text-white text-[10px] font-black uppercase tracking-wider shadow-md shadow-secondary/35">
-                                                <Award size={11} />
-                                                Top Rated
+                                    {/* Image Box */}
+                                    <div className="relative aspect-[16/10] overflow-hidden bg-muted">
+                                        <div className="absolute inset-0 bg-secondary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-10 pointer-events-none mix-blend-overlay" />
+                                        <img
+                                            src={app.image}
+                                            alt={app.title}
+                                            loading="lazy"
+                                            className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+                                        />
+                                        {/* Category tag */}
+                                        <div className="absolute top-4 left-4 z-10">
+                                            <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/95 dark:bg-slate-950/95 backdrop-blur-md border border-white/20 dark:border-white/10 text-[10px] font-bold uppercase tracking-wider text-primary dark:text-white shadow-md">
+                                                <Icon size={11} className="text-secondary" />
+                                                {CATEGORIES[app.category].label}
                                             </span>
                                         </div>
-                                    )}
-                                </div>
 
-                                {/* Content Box */}
-                                <div className="p-5 sm:p-6 flex flex-col flex-1 justify-between bg-white dark:bg-slate-900/40">
-                                    <div>
-                                        <div className="flex justify-between items-start gap-4 mb-3">
-                                            <h3 className="text-xl sm:text-2xl font-black text-primary dark:text-white tracking-tight leading-snug group-hover:text-secondary transition-colors duration-300">
-                                                {app.title}
-                                            </h3>
-                                            <YieldBadge value={app.yield} />
-                                        </div>
-                                        <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-4 line-clamp-2">
-                                            {app.desc}
-                                        </p>
                                     </div>
 
-                                    {/* Footer Specs highlight */}
-                                    <div className="flex justify-between items-center pt-4 border-t border-slate-100 dark:border-white/5">
-                                        <div className="flex flex-col max-w-[60%]">
-                                            {(() => {
-                                                const firstSpec = Object.entries(app.specs).find(([key]) => key !== 'compliance');
-                                                if (!firstSpec) return null;
-                                                return (
-                                                    <>
-                                                        <span className="text-[10px] text-slate-400 dark:text-slate-500 uppercase tracking-widest font-bold mb-0.5 truncate">
-                                                            {firstSpec[0].replace(/_/g, ' ')}
-                                                        </span>
-                                                        <span className="text-sm font-black text-primary dark:text-white leading-tight line-clamp-1">
-                                                            {firstSpec[1]}
-                                                        </span>
-                                                    </>
-                                                )
-                                            })()}
+                                    {/* Content Box */}
+                                    <div className="p-5 sm:p-6 flex flex-col flex-1 justify-between bg-white dark:bg-slate-900/40">
+                                        <div>
+                                            <div className="flex justify-between items-start gap-4 mb-3">
+                                                <h3 className="text-xl sm:text-2xl font-black text-slate-900 dark:text-white tracking-tight leading-snug group-hover:text-secondary transition-colors duration-300">
+                                                    {app.title}
+                                                </h3>
+                                            </div>
+                                            <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-4 line-clamp-2">
+                                                {app.desc}
+                                            </p>
                                         </div>
-                                        <button
-                                            type="button"
-                                            onClick={() => setSelectedId(app.id)}
-                                            className="inline-flex items-center gap-2 bg-secondary/10 hover:bg-secondary text-secondary hover:text-white px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-widest transition-all duration-300 group/btn"
-                                        >
-                                            Specs Sheet
-                                            <ArrowRight size={14} className="mt-0.5 group-hover/btn:translate-x-1 transition-transform" />
-                                        </button>
+
+                                        {/* Footer Specs highlight */}
+                                        <div className="flex justify-between items-center pt-4 border-t border-slate-100 dark:border-white/5">
+                                            <div className="flex flex-col max-w-[60%]">
+                                                {(() => {
+                                                    const firstSpec = Object.entries(app.specs).find(([key]) => key !== 'compliance');
+                                                    if (!firstSpec) return null;
+                                                    return (
+                                                        <>
+                                                            <span className="text-[10px] text-slate-400 dark:text-slate-500 uppercase tracking-widest font-bold mb-0.5 truncate">
+                                                                {firstSpec[0].replace(/_/g, ' ')}
+                                                            </span>
+                                                            <span className="text-sm font-black text-primary dark:text-white leading-tight line-clamp-1">
+                                                                {firstSpec[1]}
+                                                            </span>
+                                                        </>
+                                                    )
+                                                })()}
+                                            </div>
+                                            <button
+                                                type="button"
+                                                onClick={() => setSelectedId(app.id)}
+                                                className="inline-flex items-center gap-2 bg-secondary/10 hover:bg-secondary text-secondary hover:text-white px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-widest transition-all duration-300 group/btn"
+                                            >
+                                                Specs Sheet
+                                                <ArrowRight size={14} className="mt-0.5 group-hover/btn:translate-x-1 transition-transform" />
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

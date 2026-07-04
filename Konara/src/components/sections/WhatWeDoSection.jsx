@@ -27,7 +27,7 @@ const WhatWeDoSection = () => {
                         {/* Video Thumbnail Image */}
                         <div className="relative rounded-2xl overflow-hidden mt-auto shadow-lg group">
                             <img 
-                                src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?q=80&w=1200&auto=format&fit=crop" 
+                                src="/images/what-we-do/solar_engineers.png" 
                                 alt="Solar engineers in field" 
                                 className="w-full h-[300px] sm:h-[400px] object-cover transition-transform duration-700 group-hover:scale-105"
                             />
@@ -56,7 +56,7 @@ const WhatWeDoSection = () => {
                         {/* Top Large Image */}
                         <div className="rounded-2xl overflow-hidden mb-8 shadow-lg">
                             <img 
-                                src="https://images.unsplash.com/photo-1508514177221-188b1c77eca2?q=80&w=1200&auto=format&fit=crop" 
+                                src="/images/what-we-do/installing_solar.png" 
                                 alt="Workers installing solar panels" 
                                 className="w-full h-[300px] sm:h-[400px] object-cover hover:scale-105 transition-transform duration-700"
                             />
