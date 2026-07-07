@@ -9,7 +9,7 @@ const projects = [
         stats: 'Architectural BIPV',
         type: 'Design Center',
         desc: 'Known globally as "The Circuit Board," this building uses a stunning blend of triangular BIPV patterns to create a futuristic skin.',
-        image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070&auto=format&fit=crop',
+        image: '/images/specialized-bipv-solar-consultation.jpg',
         specs: {
             yield: 'Optimal',
             carbon: 'High Offset',
@@ -23,7 +23,7 @@ const projects = [
         stats: 'Positive Energy',
         type: 'Mixed-Use',
         desc: 'Hikari—meaning "light" in Japanese—is France\'s first Positive Energy Building, and a global symbol of sustainable architecture.',
-        image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop',
+        image: '/images/roi-and-feasibility-analysis.jpg',
         specs: {
             yield: 'Net Positive',
             carbon: 'Zero Emission',
@@ -37,7 +37,7 @@ const projects = [
         stats: '12,000+ Panels',
         type: 'Education',
         desc: 'One of the largest BIPV installations in Europe, featuring thousands of color-treated opaque solar panels across the entire building envelope.',
-        image: 'https://images.unsplash.com/photo-1541888049683-9b93510e1906?q=80&w=2070&auto=format&fit=crop',
+        image: '/images/electrical-system-procurement-1.jpg',
         specs: {
             yield: 'Massive Scale',
             carbon: 'Iconic Green',
@@ -51,7 +51,7 @@ const projects = [
         stats: '~0.8 MW',
         type: 'Datacenter',
         desc: 'A groundbreaking project in India\'s renewable landscape, generating ~0.8 MW from PV panels installed on all 4 sides of the facility.',
-        image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2034&auto=format&fit=crop',
+        image: '/images/custom-design-solar-panels-3d.jpg',
         specs: {
             yield: '0.8 MW',
             carbon: 'LEED Platinum',

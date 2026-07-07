@@ -6,25 +6,25 @@ const advantages = [
         title: 'Specialized BIPV solar consultation',
         desc: "Comprehensive EPC-driven guidance to help you select the right BIPV systems that integrate seamlessly into your building's structure and energy plan.",
         icon: Users,
-        bgImage: 'https://plus.unsplash.com/premium_photo-1682145621890-61a61ab83b4f?q=80&w=870&auto=format&fit=crop',
+        bgImage: '/images/builder-friendly-solar-panels.jpg',
     },
     {
         title: 'Return on Investment & feasibility analysis',
         desc: 'EPC-backed financial and technical assessments to determine project viability, expected savings, and long-term performance outcomes.',
         icon: TrendingUp,
-        bgImage: 'https://plus.unsplash.com/premium_photo-1664476579374-3332d1268cab?q=80&w=870&auto=format&fit=crop',
+        bgImage: '/images/custom-design-solar-panels.jpg',
     },
     {
         title: 'Electrical system procurement & solar design',
         desc: 'Complete EPC support in sourcing electrical components and creating efficient solar system designs tailored to your project requirements.',
         icon: Cpu,
-        bgImage: 'https://plus.unsplash.com/premium_photo-1663091598847-9d162258b63f?q=80&w=870&auto=format&fit=crop',
+        bgImage: '/images/quick-easy-installation-solar-panels.jpg',
     },
     {
         title: 'Component installation & system testing',
         desc: 'End-to-end EPC execution, including professional installation and rigorous system testing, ensuring optimal performance and long-term reliability.',
         icon: Wrench,
-        bgImage: 'https://plus.unsplash.com/premium_photo-1682148196781-8bbcdfd7f537?q=80&w=872&auto=format&fit=crop',
+        bgImage: '/images/smart-integration-solar-panels.jpg',
     },
 ];
 

@@ -30,8 +30,8 @@ const Bipv = () => {
     return (
         <div className="bg-slate-50 dark:bg-[#070e17] min-h-screen flex flex-col font-sans overflow-hidden">
             <Helmet>
-                <title>The Future of Solar Panel Architecture | Solastra BIPV</title>
-                <meta name="description" content="Discover how Solastra's Building Integrated Photovoltaics (BIPVs) turn ordinary structures into powerful, clean energy creators." />
+                <title>The Future of Solar Panel Architecture | Konara BIPV</title>
+                <meta name="description" content="Discover how Konara's Building Integrated Photovoltaics (BIPVs) turn ordinary structures into powerful, clean energy creators." />
             </Helmet>
 
             {/* Parallax Hero Section */}
@@ -42,7 +42,7 @@ const Bipv = () => {
                     style={{
                         height: '130%',
                         top: '-15%',
-                        backgroundImage: 'url("https://images.unsplash.com/photo-1730807908064-c087959dd52c?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")',
+                        backgroundImage: 'url("/images/banner-uncompromising-solar-performance-2.jpg")',
                         backgroundPosition: 'center',
                         backgroundSize: 'cover',
                         backgroundRepeat: 'no-repeat',
@@ -82,7 +82,7 @@ const Bipv = () => {
                             </div>
 
                             <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-primary dark:text-white leading-[1.1] tracking-tight mb-6">
-                                At Solastra, we are transforming how structures <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-amber-500 drop-shadow-sm">interact with energy</span> through BIPV.
+                                At Konara, we are transforming how structures <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-amber-500 drop-shadow-sm">interact with energy</span> through BIPV.
                             </h2>
 
                             <div className="space-y-5 text-slate-600 dark:text-slate-300 text-lg leading-relaxed font-medium">
@@ -104,7 +104,7 @@ const Bipv = () => {
                                 {/* Main Large Image */}
                                 <div className="relative aspect-[3/4] w-[80%] bg-slate-200 dark:bg-slate-800 overflow-hidden shadow-xl z-10 sm:ml-8 mx-auto">
                                     <img
-                                        src="https://images.unsplash.com/photo-1724994727393-1040b798a228?q=80&w=863&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                        src="/images/banner-redefining-solar-integration-1.jpg"
                                         alt="Modern BIPV Architecture"
                                         className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000"
                                     />
@@ -147,7 +147,7 @@ const Bipv = () => {
 
             {/* Why Choose BIPVs? */}
             <section className="py-16 md:py-20 px-4 sm:px-8 bg-white dark:bg-slate-900 mt-8 relative overflow-hidden border-y border-slate-200 dark:border-white/10">
-                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop')] bg-cover bg-center opacity-5 dark:opacity-10 mix-blend-overlay"></div>
+                <div className="absolute inset-0 bg-[url('/images/banner-redefining-solar-integration-2.jpg')] bg-cover bg-center opacity-5 dark:opacity-10 mix-blend-overlay"></div>
                 <div className="max-w-[1400px] mx-auto relative z-10">
                     <div className="text-center mb-16">
                         <h2 className="text-4xl md:text-5xl font-black text-primary dark:text-white mb-6">Why Choose BIPVs?</h2>
@@ -177,7 +177,7 @@ const Bipv = () => {
             {/* Applications */}
             <section className="py-16 md:py-20 px-4 sm:px-8 max-w-[1400px] mx-auto w-full">
                 <div className="text-center mb-16">
-                    <h2 className="text-4xl md:text-5xl font-black text-primary dark:text-white mb-6">Solastra Applications</h2>
+                    <h2 className="text-4xl md:text-5xl font-black text-primary dark:text-white mb-6">Konara Applications</h2>
                     <p className="text-slate-500 dark:text-slate-400 text-lg max-w-2xl mx-auto mb-4">
                         Seamless integration across all architectural surfaces.
                     </p>

@@ -106,7 +106,7 @@ const AboutUsSection = () => {
 
                         <div className="space-y-5 text-slate-600 dark:text-slate-300 text-lg leading-relaxed font-medium">
                             <p>
-                                At Solastra, we are redefining the future of clean energy through next-generation transparent solar technologies designed to integrate effortlessly into modern architecture. Our mission is clear and powerful: to transform every building into a generator of sustainable energy—without compromising on design, aesthetics, or functionality.
+                                At Konara, we are redefining the future of clean energy through next-generation transparent solar technologies designed to integrate effortlessly into modern architecture. Our mission is clear and powerful: to transform every building into a generator of sustainable energy—without compromising on design, aesthetics, or functionality.
                             </p>
                             <p>
                                 As pioneers in Building Integrated Photovoltaics (BIPV), we unite advanced solar innovation with architectural excellence. Our transparent solar solutions empower homeowners, builders, and contractors to create spaces that are visually striking, energy-efficient, and ready for the future.
@@ -114,7 +114,7 @@ const AboutUsSection = () => {
                             <div className="pl-6 border-l-4 border-secondary mt-8 py-2 relative">
                                 <div className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-secondary to-amber-500 rounded-full" />
                                 <p className="text-xl font-bold text-primary dark:text-white italic">
-                                    "At Solastra, we don't just install solar. We integrate energy into the very fabric of buildings—beautifully, intelligently, and sustainably."
+                                    "At Konara, we don't just install solar. We integrate energy into the very fabric of buildings—beautifully, intelligently, and sustainably."
                                 </p>
                             </div>
                         </div>
@@ -131,7 +131,7 @@ const AboutUsSection = () => {
                             {/* Main Large Image */}
                             <div className="relative aspect-[3/4] w-[80%] bg-slate-200 dark:bg-slate-800 overflow-hidden shadow-xl z-10 sm:ml-8 mx-auto">
                                 <img
-                                    src="https://plus.unsplash.com/premium_photo-1679607691186-4550451e13b7?q=80&w=415&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    src="/images/custom-design-solar-panels-3d.jpg"
                                     alt="Engineers inspecting solar"
                                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000"
                                 />
@@ -140,7 +140,7 @@ const AboutUsSection = () => {
                             {/* Secondary Overlapping Image */}
                             <div className="absolute -bottom-10 -right-4 w-[65%] aspect-[4/3] bg-background border-[8px] border-background overflow-hidden shadow-2xl z-20 group">
                                 <img
-                                    src="https://plus.unsplash.com/premium_photo-1678743133491-dc8b8713daa3?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    src="/images/smart-integration-solar-panels-1.jpg"
                                     alt="Solar Installation"
                                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                                 />
@@ -183,7 +183,7 @@ const AboutUsSection = () => {
                     <div className="absolute inset-0 bg-gradient-to-b from-slate-50 to-transparent dark:from-slate-900/50 rounded-[3rem] -z-10 pointer-events-none" />
 
                     <h3 className="text-3xl sm:text-4xl font-black text-primary dark:text-white mb-8 text-center pt-6">
-                        What Makes Solastra <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-amber-500">Different</span>
+                        What Makes Konara <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-amber-500">Different</span>
                     </h3>
                     <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-3 sm:gap-4 w-full pb-6 px-2 sm:px-4">
                         {differentiators.map((item, idx) => (

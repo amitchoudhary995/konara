@@ -17,7 +17,7 @@ const projectsData = [
     location: "14 Rue Marius Patinaud, Saint-Étienne, France",
     architects: "LIN Architects, Werner Sobek & Okasolar",
     description: 'Known globally as "The Circuit Board," this building uses a stunning blend of triangular BIPV patterns to create a futuristic skin.',
-    image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070&auto=format&fit=crop",
+    image: "/images/custom-design-solar-panels.jpg",
     inspiration: "The Circuit Board represents the perfect marriage between form and function. Its innovative use of geometric patterns and mixed BIPV technologies demonstrates how solar integration can transcend traditional design boundaries to create truly iconic architecture. This building doesn't just use solar technology—it celebrates it.",
     takeaways: [
       { title: "Mixed BIPV Technologies", desc: "Mixed use of triangular opaque PV, transparent CdTe glass, and crystalline PV.", icon: 'Layers', color: "text-secondary", bgHover: "group-hover:bg-secondary", borderHover: "hover:border-secondary/30" },
@@ -32,7 +32,7 @@ const projectsData = [
     location: "25 Quai Antoine Riboud, Lyon, France",
     architects: "Kengo Kuma & Associates | Sadev Constructions",
     description: "Hikari—meaning \"light\" in Japanese—is France's first Positive Energy Building, and a global symbol of sustainable architecture.",
-    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop",
+    image: "/images/quick-easy-installation-solar-panels.jpg",
     inspiration: "Hikari represents the pinnacle of architectural innovation and sustainable design. As France's first Positive Energy Building, it demonstrates that buildings can generate more energy than they consume while maintaining stunning aesthetic appeal.",
     takeaways: [
       { title: "Custom Crystalline PV Glass", desc: "Use of custom crystalline PV glass panels blended into a partial façade.", icon: 'Layers', color: "text-secondary", bgHover: "group-hover:bg-secondary", borderHover: "hover:border-secondary/30" },
@@ -48,7 +48,7 @@ const projectsData = [
     location: "Levantkaj 4-14, Copenhagen, Denmark",
     architects: "C.F. Møller Architects & SolarLab",
     description: "This is one of the largest BIPV installations in Europe, featuring thousands of color-treated opaque solar panels across the entire building envelope.",
-    image: "https://images.unsplash.com/photo-1541888049683-9b93510e1906?q=80&w=2070&auto=format&fit=crop",
+    image: "/images/smart-integration-solar-panels.jpg",
     inspiration: "The Copenhagen International School showcases how BIPV can be implemented at scale without compromising visual appeal. The color-changing panels create a dynamic, living façade that transforms the building into a work of art while generating clean energy.",
     takeaways: [
       { title: "Full-Surface Opaque PV Façades", desc: "Full-surface opaque PV façades installed at varying angles for optimal performance.", icon: 'Layers', color: "text-secondary", bgHover: "group-hover:bg-secondary", borderHover: "hover:border-secondary/30" },
@@ -63,7 +63,7 @@ const projectsData = [
     location: "Mahape, Navi Mumbai, Maharashtra",
     architects: "U-Solar & Waaree Energy",
     description: "A groundbreaking project in India's renewable landscape, generating ~0.8 MW from PV panels installed on all 4 sides.",
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2034&auto=format&fit=crop",
+    image: "/images/specialized-bipv-solar-consultation.jpg",
     inspiration: "The CtrlS Datacenter represents a milestone in India's journey toward sustainable infrastructure. As the country's largest BIPV installation, it proves that even energy-intensive facilities like datacenters can be transformed into net-positive energy contributors. This project demonstrates the viability and scalability of BIPV technology in the Indian context.",
     takeaways: [
       { title: "Maximum Surface Utilization", desc: "Demonstrates maximum surface-area utilization with panels on all 4 sides.", icon: 'Layers', color: "text-secondary", bgHover: "group-hover:bg-secondary", borderHover: "hover:border-secondary/30" },
@@ -118,8 +118,8 @@ const Projects = () => {
   return (
     <div className="bg-white dark:bg-[#070e17] min-h-screen">
       <Helmet>
-        <title>Projects – Solastra BIPV</title>
-        <meta name="description" content="Showcase of Solastra's global BIPV projects and architectural inspirations." />
+        <title>Projects – Konara BIPV</title>
+        <meta name="description" content="Showcase of Konara's global BIPV projects and architectural inspirations." />
       </Helmet>
 
       {/* Hero Section */}
@@ -131,7 +131,7 @@ const Projects = () => {
           style={{
             height: '130%',
             top: '-15%',
-            backgroundImage: 'url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop")',
+            backgroundImage: 'url("/images/roi-and-feasibility-analysis.jpg")',
             backgroundPosition: 'center',
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
@@ -264,7 +264,7 @@ const Projects = () => {
                     <Lightbulb size={20} strokeWidth={2} />
                   </div>
                   <h3 className="text-xl font-black text-primary dark:text-white">
-                    Why This Inspires Solastra
+                    Why This Inspires Konara
                   </h3>
                 </div>
                 <p className="text-slate-600 dark:text-slate-400 text-sm sm:text-base leading-relaxed font-medium">
@@ -303,7 +303,7 @@ const Projects = () => {
 
       </div>
 
-      {/* Solastra's Vision Section */}
+      {/* Konara's Vision Section */}
       <section className="relative py-10 sm:py-12 px-4 sm:px-8 overflow-hidden bg-slate-950 border-t border-white/10 flex justify-center text-center">
         {/* Full Section Orange Radial Gradient */}
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-secondary/70 via-secondary/10 to-slate-950 pointer-events-none" />
@@ -311,11 +311,11 @@ const Projects = () => {
         <div className="relative z-10 w-full max-w-4xl mx-auto">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-black mb-3 tracking-tight text-white flex items-center justify-center gap-3">
                 <Lightbulb size={28} className="text-secondary" strokeWidth={2.5} />
-                Solastra's Vision
+                Konara's Vision
             </h2>
             
             <p className="text-sm sm:text-base md:text-lg text-slate-300/90 leading-relaxed font-medium max-w-2xl mx-auto">
-                Solastra aims to bring similar façade-integrated crystalline BIPV solutions to commercial and residential buildings in India, combining cutting-edge technology with elegant design.
+                Konara aims to bring similar façade-integrated crystalline BIPV solutions to commercial and residential buildings in India, combining cutting-edge technology with elegant design.
             </p>
         </div>
       </section>

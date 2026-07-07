@@ -2,15 +2,20 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Sun, Building2, Home, Heart, Award } from 'lucide-react';
 
 const stats = [
-    { icon: Sun, target: 14, suffix: 'K+', label: 'Installations' },
-    { icon: Building2, target: 16, suffix: 'K+', label: 'Commercial Projects' },
-    { icon: Home, target: 345, suffix: '+', label: 'Residential Projects' },
-    { icon: Heart, target: 100, suffix: '+', label: 'Happy Customers' },
-    { icon: Award, target: 15, suffix: '+', label: 'Industry Experience' },
+    { target: 14, suffix: 'K+', label: 'Installations', theme: 'secondary', height: '60%' },
+    { target: 16, suffix: 'K+', label: 'Commercial Projects', theme: 'accent', height: '85%' },
+    { target: 345, suffix: '+', label: 'Residential Projects', theme: 'tertiary', height: '45%' },
+    { target: 100, suffix: '+', label: 'Happy Customers', theme: 'quaternary', height: '95%' },
+    { target: 15, suffix: '+', label: 'Industry Experience', theme: 'secondary', height: '50%' },
 ];
 
-// Counts a single stat up from 0 to its target once the section is visible.
-// Falls back to the final value instantly if the user prefers reduced motion.
+const colorClasses = {
+    secondary: { bg: 'bg-secondary', text: 'text-secondary' },
+    accent: { bg: 'bg-accent', text: 'text-accent' },
+    tertiary: { bg: 'bg-tertiary', text: 'text-tertiary' },
+    quaternary: { bg: 'bg-quaternary', text: 'text-quaternary' },
+};
+
 function useCountUp(target, active, delayMs) {
     const [value, setValue] = useState(0);
     const [justLanded, setJustLanded] = useState(false);
@@ -34,7 +39,7 @@ function useCountUp(target, active, delayMs) {
                 return;
             }
             const progress = Math.min(elapsed / duration, 1);
-            const eased = 1 - Math.pow(1 - progress, 3); // ease-out-cubic
+            const eased = 1 - Math.pow(1 - progress, 3);
             setValue(Math.round(eased * target));
             if (progress < 1) {
                 raf = requestAnimationFrame(tick);
@@ -50,36 +55,39 @@ function useCountUp(target, active, delayMs) {
     return { value, justLanded };
 }
 
-function StatCard({ stat, index, active, isLast }) {
-    const { icon: Icon, target, suffix, label } = stat;
-    const { value, justLanded } = useCountUp(target, active, index * 120);
+function StatBar({ stat, index, active }) {
+    const { target, suffix, label, theme, height } = stat;
+    const { value } = useCountUp(target, active, index * 120);
+    const cls = colorClasses[theme];
 
     return (
-        <div
-            className={`flex flex-col items-center justify-center p-6 rounded-2xl motion-safe:transition-all motion-safe:duration-500 hover:-translate-y-2 hover:bg-secondary/5 hover:shadow-[0_8px_30px_rgba(0,0,0,0.04)] group relative ${!isLast ? 'lg:after:content-[""] lg:after:absolute lg:after:right-[-12px] lg:after:top-1/4 lg:after:h-1/2 lg:after:w-[1px] lg:after:bg-gradient-to-b lg:after:from-transparent lg:after:via-border/60 lg:after:to-transparent' : ''
-                }`}
-            style={{
-                transitionDelay: active ? `${index * 90}ms` : '0ms',
-                opacity: active ? 1 : 0,
-                transform: active ? 'translateY(0)' : 'translateY(20px)',
-            }}
-        >
-            <div className="relative mb-5">
-                <div className="w-12 h-12 rounded-2xl bg-secondary/10 shadow-sm border border-secondary/20 flex items-center justify-center text-secondary motion-safe:transition-all motion-safe:duration-300 group-hover:scale-110 group-hover:bg-secondary group-hover:text-white group-hover:shadow-secondary/30 group-hover:shadow-lg group-hover:rotate-3">
-                    <Icon size={22} strokeWidth={2.25} />
+        <div className="flex flex-col items-center justify-end h-full w-full relative group">
+            
+            {/* The Bar */}
+            <div 
+                className={`w-full max-w-[60px] sm:max-w-[100px] lg:max-w-[140px] rounded-t-sm shadow-[0_0_15px_rgba(0,0,0,0.05)] dark:shadow-[0_0_15px_rgba(0,0,0,0.5)] transition-all duration-1000 ease-out ${cls.bg}`}
+                style={{
+                    height: active ? height : '0%',
+                    opacity: active ? 0.95 : 0,
+                    transitionDelay: `${index * 100}ms`
+                }}
+            />
+            
+            {/* Number and Label (Fixed height so all bars perfectly align at the bottom) */}
+            <div 
+                className={`h-[70px] sm:h-[80px] pt-3 sm:pt-4 text-center transition-all duration-700 opacity-0 ${active ? 'opacity-100' : ''} shrink-0 w-full`}
+                style={{ transitionDelay: `${index * 150 + 500}ms` }}
+            >
+                <div className="text-base sm:text-xl md:text-3xl font-black text-slate-900 dark:text-white whitespace-nowrap tracking-tight">
+                    {value}<span className={cls.text}>{suffix}</span>
                 </div>
-                {justLanded && (
-                    <span className="absolute inset-0 rounded-2xl border-2 border-secondary motion-safe:animate-ping pointer-events-none opacity-50" />
-                )}
+                <div className="text-[9px] sm:text-[10px] md:text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mt-1 sm:mt-2 max-w-[80px] sm:max-w-[100px] leading-snug mx-auto">
+                    {label}
+                </div>
             </div>
 
-            <h3 className="text-4xl sm:text-5xl font-black text-primary dark:text-white mb-1 font-display tracking-tight tabular-nums group-hover:text-secondary transition-colors duration-300 bg-clip-text">
-                {value}
-                <span className="text-secondary ml-0.5">{suffix}</span>
-            </h3>
-            <p className="text-[10px] sm:text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest text-center mt-2 group-hover:text-primary dark:group-hover:text-white transition-colors duration-300">
-                {label}
-            </p>
+            {/* Subtle glow on hover */}
+            <div className={`absolute inset-x-0 bottom-[70px] sm:bottom-[80px] top-auto transition-opacity duration-300 opacity-0 group-hover:opacity-30 blur-[15px] sm:blur-[20px] ${cls.bg} pointer-events-none`} style={{ height: height }} />
         </div>
     );
 }
@@ -98,7 +106,7 @@ const MetricsSection = () => {
                     observer.disconnect();
                 }
             },
-            { threshold: 0.35 }
+            { threshold: 0.25 }
         );
         observer.observe(el);
         return () => observer.disconnect();
@@ -106,7 +114,7 @@ const MetricsSection = () => {
 
     return (
         <section ref={sectionRef} className="py-12 sm:py-16 bg-background relative overflow-hidden border-t border-border transition-colors duration-500">
-            {/* Solar Logo Watermark (Restored to use branding logo.png) */}
+            {/* Solar Logo Watermark */}
             <div className="absolute top-1/2 left-1/2 pointer-events-none select-none z-0 transform-gpu motion-safe:animate-[breathe_16s_ease-in-out_infinite]">
                 <img
                     src="/logo.png"
@@ -123,8 +131,8 @@ const MetricsSection = () => {
 
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
-                {/* Header Section */}
-                <div className="text-center max-w-5xl mx-auto mb-10">
+                {/* Original Header Section Restored */}
+                <div className="text-center max-w-5xl mx-auto mb-12 sm:mb-16">
                     <div className="inline-flex items-center gap-3 justify-center mb-4 px-4 py-1.5 rounded-full bg-secondary/10 dark:bg-secondary/20 border border-secondary/20 shadow-sm backdrop-blur-md">
                         <span className="w-2 h-2 rounded-full bg-secondary animate-pulse" />
                         <p className="text-secondary font-bold tracking-[0.15em] uppercase text-xs font-nav">
@@ -132,46 +140,63 @@ const MetricsSection = () => {
                         </p>
                     </div>
                     <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-primary dark:text-white leading-[1.15] tracking-tight mb-5">
-                        Redefining  <span className="text-secondary drop-shadow-sm"> Solar Energy </span> And <span className="text-secondary drop-shadow-sm">Integration</span>
+                        Redefining <span className="text-secondary drop-shadow-sm">Solar Energy</span> Integration
                     </h2>
 
-
                     <h2 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-medium text-slate-700 dark:text-slate-300 leading-relaxed sm:leading-relaxed lg:leading-snug tracking-tight max-w-6xl mx-auto">
-                        Solastra is committed to redefining how buildings harness solar energy.
+                        Konara delivers end-to-end solar solutions for buildings —
                         <span className="hidden md:inline-flex items-center align-middle mx-4 w-24 lg:w-32 h-12 lg:h-16 rounded-full overflow-hidden border-4 border-white dark:border-slate-800 shadow-lg motion-safe:transition-all motion-safe:duration-500 hover:scale-110 hover:rotate-3 hover:shadow-secondary/40">
                             <img
-                                src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?q=80&w=200&auto=format&fit=crop"
+                                src="/images/smart-integration-solar-panels-1.jpg"
                                 alt="Sky Cloud"
                                 className="w-full h-full object-cover"
                             />
                         </span>
-                        With a blend of advanced technology, transparent solar solutions and strong engineering expertise,<span className="hidden md:inline-flex items-center align-middle mx-4 w-24 lg:w-32 h-12 lg:h-16 rounded-full overflow-hidden border-4 border-white dark:border-slate-800 shadow-lg motion-safe:transition-all motion-safe:duration-500 hover:scale-110 hover:-rotate-3 hover:shadow-secondary/40">
+                        combining advanced technology, transparent solar systems, and expert engineering<span className="hidden md:inline-flex items-center align-middle mx-4 w-24 lg:w-32 h-12 lg:h-16 rounded-full overflow-hidden border-4 border-white dark:border-slate-800 shadow-lg motion-safe:transition-all motion-safe:duration-500 hover:scale-110 hover:-rotate-3 hover:shadow-secondary/40">
                             <img
-                                src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?q=80&w=200&auto=format&fit=crop"
+                                src="/images/builder-friendly-solar-panels.jpg"
                                 alt="Solar Installer"
                                 className="w-full h-full object-cover"
                             />
                         </span>
-                        we deliver end-to-end services that ensure reliability, efficiency, and long-term performance.
+                        to maximize reliability, efficiency, and long-term performance.
                     </h2>
                 </div>
 
-                {/* Stats Row — Frosted Glass Container dashboard card */}
-                <div className="bg-white/80 dark:bg-slate-900/40 backdrop-blur-2xl rounded-[2rem] border border-white dark:border-white/10 p-4 sm:p-6 lg:p-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-y-8 gap-x-4 sm:gap-x-8 text-center shadow-[0_8px_30px_rgb(0,0,0,0.06)] relative z-20">
-                    {/* Subtle inner highlight */}
-                    <div className="absolute inset-0 rounded-[2rem] border border-white/20 dark:border-white/5 pointer-events-none" />
-
-                    {stats.map((item, idx) => (
-                        <StatCard
-                            key={item.label}
-                            stat={item}
-                            index={idx}
-                            active={active}
-                            isLast={idx === stats.length - 1}
+                {/* Graph Dashboard Container (Responsive, Light & Dark Mode) */}
+                <div className="bg-white dark:bg-[#111111] border border-slate-200 dark:border-white/10 rounded-[2rem] shadow-[0_8px_30px_rgb(0,0,0,0.06)] dark:shadow-2xl relative overflow-hidden flex flex-col mx-auto w-full transition-colors duration-500">
+                    
+                    {/* Right Content (Abstract Building Graphic Overlay) */}
+                    <div className="absolute top-0 right-0 w-full lg:w-1/2 h-full opacity-10 dark:opacity-50 pointer-events-none mix-blend-multiply dark:mix-blend-screen z-0">
+                        <div 
+                            className="absolute inset-0 bg-cover bg-center"
+                            style={{ backgroundImage: 'url(/images/custom-design-solar-panels.jpg)' }}
                         />
-                    ))}
-                </div>
+                        <div 
+                            className="absolute inset-0 opacity-40 dark:opacity-80"
+                            style={{ 
+                                backgroundImage: `repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(0,0,0,0.8) 40px, rgba(0,0,0,0.8) 80px)`
+                            }}
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 dark:from-[#111111] dark:via-[#111111]/60 to-transparent transition-colors duration-500" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent dark:from-[#111111] dark:via-transparent to-transparent transition-colors duration-500" />
+                    </div>
 
+                    <div className="relative z-20 flex flex-col justify-end w-full pt-12 sm:pt-16 px-4 sm:px-8 md:px-12 pb-8 sm:pb-12 min-h-[350px] sm:min-h-[450px]">
+                        <div className="flex items-end justify-between gap-2 sm:gap-4 md:gap-8 h-[250px] sm:h-[350px] w-full">
+                            
+                            {/* The Bars */}
+                            {stats.map((item, idx) => (
+                                <StatBar
+                                    key={item.label}
+                                    stat={item}
+                                    index={idx}
+                                    active={active}
+                                />
+                            ))}
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <style>{`

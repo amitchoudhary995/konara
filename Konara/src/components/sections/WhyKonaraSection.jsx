@@ -4,32 +4,32 @@ import { Layers, Lightbulb, Workflow, TrendingUp, ShieldCheck, Wrench, Plus, Min
 const reasons = [
     {
         title: "Seamless Integration with Modern Architecture",
-        desc: "Solastra's advanced transparent solar technology is engineered to merge flawlessly with the aesthetics of contemporary buildings. Unlike bulky traditional panels, our Building Integrated Photovoltaics (BIPV) becomes a natural part of your structure enhancing design rather than obstructing it. Whether used in facades, windows, skylights, or canopies, Solastra's solutions combine clean energy generation with high-end architectural beauty, making them ideal for green buildings, corporate infrastructures, and modern residential spaces.",
+        desc: "Konara's advanced transparent solar technology is engineered to merge flawlessly with the aesthetics of contemporary buildings. Unlike bulky traditional panels, our Building Integrated Photovoltaics (BIPV) becomes a natural part of your structure enhancing design rather than obstructing it. Whether used in facades, windows, skylights, or canopies, Konara's solutions combine clean energy generation with high-end architectural beauty, making them ideal for green buildings, corporate infrastructures, and modern residential spaces.",
         icon: Layers
     },
     {
         title: "Advanced Engineering & Precision-Driven Solar Design",
-        desc: "At Solastra, every project is crafted with rigorous engineering and innovative solar design. Our team analyzes structural dynamics, light transmission needs, thermal efficiency, and energy output to deliver durable and high-performing systems. Using premium materials and next-generation photovoltaic technology, we ensure superior efficiency, reliability, and minimum power loss. This precision-driven approach makes Solastra a trusted choice for transparent solar panels and BIPV engineering across diverse industries.",
+        desc: "At Konara, every project is crafted with rigorous engineering and innovative solar design. Our team analyzes structural dynamics, light transmission needs, thermal efficiency, and energy output to deliver durable and high-performing systems. Using premium materials and next-generation photovoltaic technology, we ensure superior efficiency, reliability, and minimum power loss. This precision-driven approach makes Konara a trusted choice for transparent solar panels and BIPV engineering across diverse industries.",
         icon: Lightbulb
     },
     {
         title: "End-to-End Transparent Solar Solutions",
-        desc: "Solastra provides a complete ecosystem of solar services tailored to the evolving needs of modern buildings. From initial consultation and ROI analysis to building material procurement, electrical system design, installation, system testing, and long-term maintenance, we offer a streamlined experience at every stage. Our integrated approach eliminates project delays, minimizes technical challenges, and ensures a smooth transition to sustainable, future-ready energy systems. With Solastra, adopting solar-integrated architecture becomes effortless and efficient.",
+        desc: "Konara provides a complete ecosystem of solar services tailored to the evolving needs of modern buildings. From initial consultation and ROI analysis to building material procurement, electrical system design, installation, system testing, and long-term maintenance, we offer a streamlined experience at every stage. Our integrated approach eliminates project delays, minimizes technical challenges, and ensures a smooth transition to sustainable, future-ready energy systems. With Konara, adopting solar-integrated architecture becomes effortless and efficient.",
         icon: Workflow
     },
     {
         title: "Smart Energy Performance with Higher ROI",
-        desc: "Our transparent solar systems are strategically engineered to maximize energy output while maintaining optimal visual clarity. By utilizing high-quality photovoltaic materials and smart integration methods, Solastra ensures long-term power generation and reduced electricity costs. The result is a higher return on investment, enhanced building value, and lower operational expenses. Whether you're developing a commercial complex or a premium residence, Solastra's solar BIPV solutions provide a sustainable energy advantage with guaranteed long-term savings.",
+        desc: "Our transparent solar systems are strategically engineered to maximize energy output while maintaining optimal visual clarity. By utilizing high-quality photovoltaic materials and smart integration methods, Konara ensures long-term power generation and reduced electricity costs. The result is a higher return on investment, enhanced building value, and lower operational expenses. Whether you're developing a commercial complex or a premium residence, Konara's solar BIPV solutions provide a sustainable energy advantage with guaranteed long-term savings.",
         icon: TrendingUp
     },
     {
         title: "Commitment to Quality, Innovation, and Sustainability",
-        desc: "Solastra continuously pushes the boundaries of solar technology to deliver the finest transparent solar products in the industry. Our systems undergo stringent quality checks, durability tests, and performance assessments to ensure long-term stability even in challenging environmental conditions. As a company rooted in innovation and sustainability, we are dedicated to helping clients reduce carbon footprints, achieve green certifications, and contribute to a cleaner future through high-performance transparent solar panel solutions.",
+        desc: "Konara continuously pushes the boundaries of solar technology to deliver the finest transparent solar products in the industry. Our systems undergo stringent quality checks, durability tests, and performance assessments to ensure long-term stability even in challenging environmental conditions. As a company rooted in innovation and sustainability, we are dedicated to helping clients reduce carbon footprints, achieve green certifications, and contribute to a cleaner future through high-performance transparent solar panel solutions.",
         icon: ShieldCheck
     },
     {
         title: "Expert Support and Long-Term System Maintenance",
-        desc: "Solastra delivers unmatched after-sales support with regular system inspections, performance optimization, and proactive maintenance services. Our dedicated technical team ensures that your solar installation continues to generate energy at peak efficiency for years to come. From component replacements to troubleshooting and system upgrades, we provide comprehensive assistance to keep your building powered, sustainable, and future-ready always.",
+        desc: "Konara delivers unmatched after-sales support with regular system inspections, performance optimization, and proactive maintenance services. Our dedicated technical team ensures that your solar installation continues to generate energy at peak efficiency for years to come. From component replacements to troubleshooting and system upgrades, we provide comprehensive assistance to keep your building powered, sustainable, and future-ready always.",
         icon: Wrench
     }
 ];
@@ -55,7 +55,7 @@ const AccordionItem = ({ reason, isOpen, onClick }) => (
     </div>
 );
 
-const WhySolastraSection = () => {
+const WhyKonaraSection = () => {
     const sectionRef = useRef(null);
     const [visible, setVisible] = useState(false);
     const [openIndex, setOpenIndex] = useState(0);
@@ -100,17 +100,17 @@ const WhySolastraSection = () => {
                             <div className="inline-flex items-center gap-3 px-4 py-1.5 rounded-full bg-secondary/10 dark:bg-secondary/20 border border-secondary/20 mb-6 shadow-sm backdrop-blur-md">
                                 <span className="w-2 h-2 rounded-full bg-secondary animate-pulse" />
                                 <span className="text-secondary font-bold tracking-widest uppercase text-[10px] sm:text-xs">
-                                    The Solastra Advantage
+                                    The Konara Advantage
                                 </span>
                             </div>
                             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-primary dark:text-white leading-[1.1] tracking-tight mb-6">
-                                Why Solastra is the <br className="hidden sm:block"/>
+                                Why Konara is the <br className="hidden sm:block"/>
                                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-amber-500 drop-shadow-sm">
                                     Smart Choice?
                                 </span>
                             </h2>
                             <p className="text-slate-600 dark:text-slate-400 text-lg sm:text-xl leading-relaxed font-medium mb-8">
-                                Discover what sets Solastra apart in the world of transparent solar technology. Our commitment to innovation and sustainability makes us the preferred partner for modern architecture.
+                                Discover what sets Konara apart in the world of transparent solar technology. Our commitment to innovation and sustainability makes us the preferred partner for modern architecture.
                             </p>
                         </div>
                     </div>
@@ -136,4 +136,4 @@ const WhySolastraSection = () => {
     );
 };
 
-export default WhySolastraSection;
+export default WhyKonaraSection;

@@ -68,8 +68,8 @@ const Contact = () => {
     return (
         <div className="bg-slate-50 dark:bg-[#070e17] min-h-screen flex flex-col font-sans overflow-hidden">
             <Helmet>
-                <title>Contact Us – Solastra BIPV</title>
-                <meta name="description" content="Get in touch with Solastra for your BIPV requirements." />
+                <title>Contact Us – Konara BIPV</title>
+                <meta name="description" content="Get in touch with Konara for your BIPV requirements." />
             </Helmet>
 
             {/* Parallax Hero Section (Matching About/Projects) */}
@@ -80,7 +80,7 @@ const Contact = () => {
                     style={{
                         height: '130%',
                         top: '-15%',
-                        backgroundImage: 'url("https://images.unsplash.com/photo-1488998427799-e3362cec87c3?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")',
+                        backgroundImage: 'url("/images/banner-transforming-surfaces.jpg")',
                         backgroundPosition: 'center',
                         backgroundSize: 'cover',
                         backgroundRepeat: 'no-repeat',
@@ -138,7 +138,7 @@ const Contact = () => {
                             </div>
                             <h3 className="text-[11px] font-black uppercase tracking-[0.2em] text-slate-400 dark:text-slate-500 mb-2">Email Address</h3>
                             <p className="text-lg font-black text-primary dark:text-white group-hover:text-amber-500 transition-colors">
-                                info@solastra.in
+                                info@konara.in
                             </p>
                         </div>
 

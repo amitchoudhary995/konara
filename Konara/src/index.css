@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap');
 @import "tailwindcss";
@@ -7,27 +7,33 @@
 
 
 :root {
-  --color-primary: #1B3767;
-  /* Konara Dark Navy */
-  --color-secondary: #E34D2A;
-  /* Konara Orange */
-  --color-accent: #F89921;
-  /* Lime/Neon Green for highlights */
+  --color-primary: #2B4B87;
+  /* New palette Dark Blue */
+  --color-secondary: #D4841B;
+  /* Darker Yellow/Orange */
+  --color-accent: #3BA8C2;
+  /* New palette Teal */
+  --color-tertiary: #45B162;
+  /* Green */
+  --color-quaternary: #AAB84A;
+  /* Olive Green */
   --color-background: #ffffff;
   --color-text: #0F172A;
   --color-muted: #64748B;
   --color-border: #E2E8F0;
 
   /* Brand palette colors */
-  --color-brand-navy: #1B3767;
-  --color-brand-coral: #E34D2A;
-  --color-brand-amber: #F89921;
+  --color-brand-navy: #2B4B87;
+  --color-brand-coral: #F2AC40;
+  --color-brand-amber: #3BA8C2;
 }
 
 .dark {
-  --color-primary: #1B3767;
-  --color-secondary: #E34D2A;
-  --color-accent: #F89921;
+  --color-primary: #4B6EAB; /* Slightly lighter blue for dark mode visibility */
+  --color-secondary: #D4841B;
+  --color-accent: #3BA8C2;
+  --color-tertiary: #45B162;
+  --color-quaternary: #AAB84A;
   --color-background: #020617;
   --color-text: #F8FAFC;
   --color-muted: #94A3B8;
@@ -38,6 +44,8 @@
   --color-primary: var(--color-primary);
   --color-secondary: var(--color-secondary);
   --color-accent: var(--color-accent);
+  --color-tertiary: var(--color-tertiary);
+  --color-quaternary: var(--color-quaternary);
   --color-background: var(--color-background);
   --color-text: var(--color-text);
   --color-muted: var(--color-muted);
@@ -47,13 +55,13 @@
   --color-brand-coral: var(--color-brand-coral);
   --color-brand-amber: var(--color-brand-amber);
 
-  --background-image-gradient-blue: linear-gradient(135deg, #3B82F6, #1E3A8A);
-  --background-image-gradient-green: linear-gradient(135deg, #C5E847, #14B8A6);
-  --background-image-gradient-orange: linear-gradient(135deg, #E34D2A, #C23312);
+  --background-image-gradient-blue: linear-gradient(135deg, #5bb4e5, #2B4B87);
+  --background-image-gradient-green: linear-gradient(135deg, #AAB84A, #3BA8C2);
+  --background-image-gradient-orange: linear-gradient(135deg, #F2AC40, #D99E47);
 
   --font-sans: 'Open Sans', sans-serif;
   --font-nav: 'Open Sans', sans-serif;
-  --font-display: 'Geist Mono', monospace;
+  --font-display: 'Open Sans', monospace;
 }
 
 @layer base {

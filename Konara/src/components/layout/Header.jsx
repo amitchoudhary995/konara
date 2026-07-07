@@ -50,7 +50,7 @@ const TopInfoBar = memo(function TopInfoBar() {
   ));
 
   return (
-    <div className="bg-primary text-white text-xs border-b border-white/10">
+    <div className="bg-gradient-to-r from-primary via-accent to-tertiary text-white text-xs border-b border-white/10">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-10">
         <div className="hidden sm:flex items-center gap-6">
           <span className="flex items-center gap-1.5 opacity-80 hover:opacity-100 transition-opacity">
@@ -91,6 +91,17 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isMenuOpen]);
+
   const toggleMenu = useCallback(() => {
     setIsMenuOpen((prev) => !prev);
   }, []);
@@ -108,8 +119,8 @@ const Header = () => {
 
       <div
         className={`transition-all duration-500 relative ${isScrolled
-          ? 'bg-background/85 backdrop-blur-lg shadow-[0_8px_30px_rgba(0,0,0,0.04)] lg:border lg:border-border/50 lg:rounded-full lg:mt-4 lg:mx-6 xl:mx-auto max-w-7xl lg:px-4'
-          : 'bg-transparent'
+          ? 'bg-background/85 backdrop-blur-lg shadow-[0_8px_30px_rgba(0,0,0,0.04)] border-b lg:border border-secondary/40 lg:rounded-full lg:mt-4 lg:mx-6 xl:mx-auto max-w-7xl lg:px-4'
+          : 'bg-transparent border-b border-secondary/30'
           }`}
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -153,10 +164,10 @@ const Header = () => {
               <img
                 src={'/logo.svg'}
                 alt="Konara Logo"
-                className={`object-contain transition-all hover:scale-105 duration-500 ${isScrolled
+                className={`object-contain transition-all hover:scale-105 duration-500 drop-shadow-sm ${isScrolled
                   ? 'h-8 lg:h-10 '
                   : 'h-10 lg:h-12 '
-                  } ${theme === 'light' ? 'drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]' : ''}`}
+                  }`}
               />
             </Link>
 

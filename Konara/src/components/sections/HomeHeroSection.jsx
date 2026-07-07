@@ -11,10 +11,10 @@ const HeroSection = () => {
             sidebarLabel: 'Smart Solar Technology',
             title: 'Redefining Solar Integration With <span class="text-secondary">Architectural Elegance</span>',
             description: 'Seamlessly blending high-performance photovoltaics into modern façades, rooftops, and skylights without compromising design.',
-            image: 'https://plus.unsplash.com/premium_photo-1682148026899-d21f17c04e80?q=80&w=870&auto=format&fit=crop',
+            image: '/images/banner-redefining-solar-integration-1.jpg',
             icon: Sun,
             ctaText: 'Discover More',
-            ctaLink: '/solutions',
+            ctaLink: '/contact',
         },
         {
             id: 2,
@@ -22,10 +22,10 @@ const HeroSection = () => {
             sidebarLabel: 'Advanced Solar Solutions',
             title: 'Uncompromising <span class="text-secondary">Solar Performance</span>',
             description: 'Powering the future of smart-city infrastructure with precision-engineered building-integrated photovoltaic systems.',
-            image: 'https://images.unsplash.com/photo-1558449028-b53a39d100fc?q=80&w=774&auto=format&fit=crop',
+            image: '/images/banner-redefining-solar-integration-2.jpg',
             icon: Zap,
             ctaText: 'Discover More',
-            ctaLink: '/technology',
+            ctaLink: '/contact',
         },
         {
             id: 3,
@@ -33,15 +33,14 @@ const HeroSection = () => {
             sidebarLabel: 'Unlimited Solar Power',
             title: 'Transforming Surfaces Into <span class="text-secondary">Clean Power Plants</span>',
             description: 'Engineered structural panels and solar glass that combine severe weather resistance with maximum grid-independent energy output.',
-            image: 'https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?q=80&w=774&auto=format&fit=crop',
+            image: '/images/banner-transforming-surfaces.jpg',
             icon: Leaf,
             ctaText: 'Discover More',
-            ctaLink: '/products',
+            ctaLink: '/contact',
         },
     ];
 
     const [currentIndex, setCurrentIndex] = useState(0);
-    const [isPaused, setIsPaused] = useState(false);
     const intervalRef = useRef(null);
     const totalSlides = slides.length;
 
@@ -58,29 +57,15 @@ const HeroSection = () => {
 
     // --- Autoplay ---
     useEffect(() => {
-        if (isPaused) return;
-        intervalRef.current = setInterval(goNext, 3000);
-        return () => clearInterval(intervalRef.current);
-    }, [goNext, isPaused]);
-
-    useEffect(() => {
-        return () => {
-            if (intervalRef.current) {
-                clearInterval(intervalRef.current);
-            }
-        };
-    }, [currentIndex]);
-
-    const handleMouseEnter = () => setIsPaused(true);
-    const handleMouseLeave = () => setIsPaused(false);
+        const interval = setInterval(goNext, 5000); // 5000ms is smoother and gives more time to read
+        return () => clearInterval(interval);
+    }, [goNext]);
 
     const slide = slides[currentIndex];
 
     return (
         <section
             className="relative h-[70vh] min-h-[580px] md:h-[65vh] lg:h-[65vh] xl:h-[80vh] xl:min-h-[700px] w-full overflow-hidden font-sans"
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
         >
             {/* Background Images with cross-fade */}
             {slides.map((s, idx) => (
